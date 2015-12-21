@@ -1,0 +1,79 @@
+
+.homepage-page {
+	background: #dedede;
+	overflow: auto;
+}
+
+// homepage hero slider
+.jumbotron {
+	padding-top: 0;
+	padding-bottom: 0;
+
+}
+
+.slick-dots {
+	position: initial;
+	float: right;
+	margin-top: -105px;
+	width: 50%;
+}
+
+.slick-dots li button:before {
+	font-size: 16px;
+}
+
+.slick-dots li.slick-active button:before {
+	color: blue;
+}
+
+.homepage-slider-img {
+	width: 50%;
+	height: 600px;
+	float: left;
+	background: black;
+}
+
+.homepage-slider-text {
+	width: 50%;
+	float: left;
+	text-align: center;
+}
+
+
+.homepage-about {
+	width: 48%;
+	height: 580px;
+	margin-right: 1%;
+	float: left;
+	background: #f1f2f2;
+}
+
+.homepage-featured-items-container {
+	width: 48%;
+	padding-top: 0;
+	padding-bottom: 0;
+	margin-left: 1%;
+	float: right;
+}
+
+.homepage-featured-item:first-of-type {
+	margin-bottom: 30px;
+}
+
+.homepage-featured-item {
+	width: 100%;
+	height: 275px;
+}
+
+.homepage-featured-item-img {
+	width: 340px;
+	height: 275px;
+	float: left;
+	background: #777777;
+}
+
+.homepage-featured-item-caption {
+	background: #f1f2f2;
+	height: 275px;
+	text-align: center;
+}
