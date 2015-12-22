@@ -1,5 +1,57 @@
+.container-fluid {
+	padding-left: 0;
+	padding-right: 0;
+}
+
 .navbar {
 	margin-bottom: 0;
 	font-family: $pt-sans;
 	text-transform: uppercase;
+}
+
+.navbar-black {
+	background-color: $black;
+}
+
+.navbar-default {
+	border: none;
+}
+
+.navbar-default .navbar-collapse {
+	border: none;
+}
+
+.navbar-brand {
+	height: 90px;
+}
+
+
+.navbar-default .navbar-nav>li>a {
+	color: $white;
+}
+
+.navbar-text {
+	margin-left: 0;
+	margin-top: 0;
+	margin-bottom: 0;
+	padding: 15px;
+}
+
+.navbar-default .navbar-text {
+	background: $blue;
+}
+
+.navbar-default .navbar-link {
+	color: $white;
+}
+
+.logo {
+	width: 60px;
+}
+
+h1 {
+	margin-top: 0px;
+	margin-bottom: 0px;
+	display: flex;
+	align-items: center;
 }
