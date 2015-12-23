@@ -16,24 +16,40 @@
 }
 
 .slick-dots li.slick-active button:before {
+	opacity: 1.0;
+}
+
+.homepage-page .slick-dots li.slick-active button:before {
 	color: $blue;
 }
+
+.collections-page .slick-dots li.slick-active button:before {
+	color: $red;
+}
+
 
 .jumbotron-slider-img {
 	width: 50%;
 	height: 600px;
 	float: left;
-	background: black;
+	background: #eee;
 }
 
 .jumbotron-slider-text {
 	width: 50%;
 	float: left;
 	text-align: center;
-	color: $blue;
 	text-transform: uppercase;
 	padding-left: 160px;
 	padding-right: 160px;
+}
+
+.homepage-page .jumbotron-slider-text {
+	color: $blue;
+}
+
+.collections-page .jumbotron-slider-text {
+	color: $red;
 }
 
 .jumbotron-slider-text-subheading {
@@ -48,6 +64,10 @@
 	font-size: 45px;
 }
 
-.jumbotron-slider-text-link  {
+.homepage-page .jumbotron-slider-text-link  {
 	@include anchor-link($blue, $dark-blue);
+}
+
+.collections-page .jumbotron-slider-text-link  {
+	@include anchor-link($red, $dark-red);
 }

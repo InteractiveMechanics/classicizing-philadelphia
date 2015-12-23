@@ -2,6 +2,9 @@
 a {
   font-weight: 700; }
 
+img, video {
+  max-width: 100%; }
+
 .paragraph-link {
   color: #404041;
   transition: all 0.25s ease-in-out; }
@@ -155,22 +158,33 @@ footer {
   font-size: 16px; }
 
 .slick-dots li.slick-active button:before {
+  opacity: 1.0; }
+
+.homepage-page .slick-dots li.slick-active button:before {
   color: #2e7dc1; }
+
+.collections-page .slick-dots li.slick-active button:before {
+  color: #A2302E; }
 
 .jumbotron-slider-img {
   width: 50%;
   height: 600px;
   float: left;
-  background: black; }
+  background: #eee; }
 
 .jumbotron-slider-text {
   width: 50%;
   float: left;
   text-align: center;
-  color: #2e7dc1;
   text-transform: uppercase;
   padding-left: 160px;
   padding-right: 160px; }
+
+.homepage-page .jumbotron-slider-text {
+  color: #2e7dc1; }
+
+.collections-page .jumbotron-slider-text {
+  color: #A2302E; }
 
 .jumbotron-slider-text-subheading {
   padding-top: 80px;
@@ -182,17 +196,34 @@ footer {
   padding-bottom: 100px;
   font-size: 45px; }
 
-.jumbotron-slider-text-link {
+.homepage-page .jumbotron-slider-text-link {
   color: #2e7dc1;
   transition: all 0.25s ease-in-out; }
-  .jumbotron-slider-text-link:hover, .jumbotron-slider-text-link:active, .jumbotron-slider-text-link:link, .jumbotron-slider-text-link:focus, .jumbotron-slider-text-link:active:focus {
+  .homepage-page .jumbotron-slider-text-link:hover, .homepage-page .jumbotron-slider-text-link:active, .homepage-page .jumbotron-slider-text-link:link, .homepage-page .jumbotron-slider-text-link:focus, .homepage-page .jumbotron-slider-text-link:active:focus {
     color: #1d507c; }
+
+.collections-page .jumbotron-slider-text-link {
+  color: #A2302E;
+  transition: all 0.25s ease-in-out; }
+  .collections-page .jumbotron-slider-text-link:hover, .collections-page .jumbotron-slider-text-link:active, .collections-page .jumbotron-slider-text-link:link, .collections-page .jumbotron-slider-text-link:focus, .collections-page .jumbotron-slider-text-link:active:focus {
+    color: #8b2927; }
 
 .thumbnail:first-of-type {
   margin-bottom: 30px; }
 
 .thumbnail {
   width: 100%;
+  height: 275px;
+  padding: 0;
+  border: none; }
+
+.thumbnail-50 {
+  width: 48%;
+  margin-left: 1%;
+  margin-right: 1%;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  float: left;
   height: 275px;
   padding: 0;
   border: none; }
