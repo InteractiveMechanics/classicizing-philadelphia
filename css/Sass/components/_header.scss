@@ -19,6 +19,7 @@
 
 .navbar-default .navbar-collapse {
 	border: none;
+	position: relative;
 }
 
 .navbar-brand {
@@ -54,4 +55,80 @@ h1 {
 	margin-bottom: 0px;
 	display: flex;
 	align-items: center;
+}
+
+#search-icon, #reset-icon {
+	width: 20px;
+	fill: #d1d3d4;
+}
+
+.search-btn {
+	background-color: $black;
+	border: $black;
+	border-radius: 0;
+	height: 50px;
+	margin-right: -15px;
+	margin-top: -8px;
+	margin-bottom: -8px;
+	transition: $transition;
+	&:hover, &:active, &:focus, &:active:focus {
+		background-color: $light-black;
+		transition: $transition;
+	}
+}
+
+.search-btn:hover #search-icon {
+	fill: $black;
+}
+
+.search-input-show {
+	// border: 1px solid red;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+.search-input {
+	height: 50px;
+	width: 200px !important;
+	border-radius: 0;
+	font-size: 18px;
+	border: none;
+	color: $white;
+	background-color: $light-black;
+}
+
+.search-btn-move {
+	margin-right: 0;
+	position: absolute;
+	right: 243px;
+	background-color: $light-black;
+	&:hover, &:active, &:focus, &:active:focus {
+		background-color: $light-black;
+	}
+}
+
+.search-btn-move:hover #search-icon {
+	fill: $white;
+}
+
+.reset-btn {
+	background-color: $light-black;
+	border: none;
+	border-radius: 0;
+	height: 50px;
+	margin-left: -4px;
+	margin-right: 0px;
+	margin-top: -8px;
+	margin-bottom: -8px;
+	transition: $transition;
+	&:hover {
+		background-color: $light-black;
+		transition: $transition;
+	}
+}
+
+.reset-btn:hover #reset-icon {
+	fill: $white;
+	opacity: 1.0;
 }

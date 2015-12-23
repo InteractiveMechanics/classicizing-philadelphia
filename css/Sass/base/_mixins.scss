@@ -1,0 +1,8 @@
+
+@mixin anchor-link($color1, $color2) {
+	color: $color1;
+	transition: $transition;
+	&:hover, &:active, &:link, &:focus, &:active:focus {
+		color: $color2;
+	}
+}

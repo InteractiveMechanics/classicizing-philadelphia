@@ -4,5 +4,10 @@ footer {
 	text-align: center;
 	background-color: #dedede;
 	font-family: $open-sans;
+	color: $taupe;
 
+}
+
+.footer-link {
+	@include anchor-link($taupe, $dark-taupe);
 }

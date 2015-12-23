@@ -1,0 +1,7 @@
+a {
+	font-weight: 700;
+}
+
+.paragraph-link {
+	@include anchor-link($black, $dark-black);
+}
