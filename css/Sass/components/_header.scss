@@ -29,6 +29,20 @@
 
 .navbar-default .navbar-nav>li>a {
 	color: $white;
+	transition: $transition;
+	position: relative;
+	&:hover {
+		color: $white;
+		&:after {
+		content: "";
+		border-bottom: 4px solid $white;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		margin-left: 15px;
+		right: 15px;
+		}
+	}
 }
 
 .navbar-text {

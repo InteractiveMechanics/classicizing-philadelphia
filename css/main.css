@@ -11,6 +11,10 @@ img, video {
   .paragraph-link:hover, .paragraph-link:active, .paragraph-link:link, .paragraph-link:focus, .paragraph-link:active:focus {
     color: #19191a; }
 
+.btn:focus {
+  outline-color: transparent;
+  outline: none; }
+
 h1, h2, h3, h4, h5, h6 {
   font-family: "PT Sans Narrow", sans-serif; }
 
@@ -44,7 +48,19 @@ section {
   height: 90px; }
 
 .navbar-default .navbar-nav > li > a {
-  color: #f1f2f2; }
+  color: #f1f2f2;
+  transition: all 0.25s ease-in-out;
+  position: relative; }
+  .navbar-default .navbar-nav > li > a:hover {
+    color: #f1f2f2; }
+    .navbar-default .navbar-nav > li > a:hover:after {
+      content: "";
+      border-bottom: 4px solid #f1f2f2;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      margin-left: 15px;
+      right: 15px; }
 
 .navbar-text {
   margin-left: 0;
@@ -168,7 +184,6 @@ footer {
 
 .jumbotron-slider-img {
   width: 50%;
-  height: 600px;
   float: left;
   background: #eee; }
 
