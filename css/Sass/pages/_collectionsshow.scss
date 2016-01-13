@@ -1,0 +1,108 @@
+.collectionsshow-page {
+	background-color: #dedede;
+}
+
+.collections-jumbotron-page-heading {
+	@include page-heading();
+	padding-left: 160px;
+	padding-right: 160px;
+	text-align: center;
+}
+
+.collections-jumbotron-text-container {
+	width: 50%;
+	float: left;
+}
+
+.collections-jumbotron-page-summary {
+	margin-top: 50px;
+	padding-left: 80px;
+	padding-right: 80px;
+}
+
+.item-counter {
+	display: inline-block;
+}
+
+.filter-section {
+	padding-top: 40px;
+	padding-bottom: 40px;
+}
+
+.filters-container {
+	float: right;
+	margin-top: 20px;
+}
+
+.single-filter:first-of-type {
+	margin-right: 25px;
+}
+
+.single-filter .filter-option {
+	color: $blue;
+	font-family: $pt-sans;
+	font-size: 24px;
+	padding: 0;
+	margin-left: -10px;
+}
+
+.single-filter .dropdown-menu>li>a {
+	font-family: $pt-sans;
+	font-size: 18px;
+}
+
+.single-filter .btn {
+	border-bottom: 3px solid $blue;
+	border-radius: 0px;
+	border-top: none;
+	border-right: none;
+	border-left: none;
+	background-color: #dedede;
+}
+
+
+
+.vertical-thumbnail-container {
+	padding-top: 0;
+	overflow: auto;
+}
+
+.vertical-thumbnail {
+	margin-bottom: 30px;
+}
+
+.vertical-thumbnail-img {
+	width: 100%;
+	// height: 235px;
+}
+
+.vertical-thumbnail-caption-container {
+	background-color: $white;
+	height: 200px;
+	color: $taupe;
+	flex-direction: column;
+	justify-content: center;
+	text-transform: uppercase;	
+	text-align: center;
+	padding: 50px;
+	display: flex;
+	letter-spacing: 1.75px;
+}
+
+.collectionsshow-pagination {
+	padding-top: 0px;
+	padding-bottom: 0px;
+	text-transform: uppercase;
+}
+
+.pagination-prev {
+	float: right;
+}
+
+.pagination-next {
+	float: left;
+}
+
+.pagination-link {
+	font-weight: 400;
+}

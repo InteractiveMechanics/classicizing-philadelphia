@@ -2,6 +2,12 @@ a {
 	font-weight: 700;
 }
 
+a.disabled {
+	color: $taupe;
+	opacity: 0.5;
+	pointer-events: none;
+}
+
 img, video {
 	max-width: 100%;
 }
@@ -15,4 +21,17 @@ img, video {
 		outline-color: transparent;
 		outline: none;
 	}
+}
+
+.bootstrap-select.btn-group .dropdown-toggle .caret {
+	 width: 10px;
+  	height: 10px;
+  	border: none;
+}
+
+.bootstrap-select.btn-group .dropdown-toggle .caret:before {
+	content: url(../img/icon-carat.svg);
+	position: absolute;
+	top: -10px;
+	right: -10px;
 }
