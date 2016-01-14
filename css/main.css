@@ -392,6 +392,11 @@ footer {
   display: flex;
   letter-spacing: 1.75px; }
 
+.vertical-thumbnail-link {
+  transition: all 0.25s ease-in-out; }
+  .vertical-thumbnail-link:hover {
+    opacity: 0.7; }
+
 .collectionsshow-pagination {
   padding-top: 0px;
   padding-bottom: 0px;
@@ -405,5 +410,50 @@ footer {
 
 .pagination-link {
   font-weight: 400; }
+
+.single-item-page {
+  overflow: auto; }
+
+.item-image {
+  padding-left: 0;
+  padding-right: 0; }
+
+.item-description-container {
+  padding: 75px 75px 60px 75px; }
+
+.item-name {
+  display: inline-block;
+  color: #2e7dc1;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 1.75px;
+  font-size: 42px; }
+
+.item-year {
+  display: inline-block;
+  color: #7a7765;
+  margin-left: 10px; }
+
+.item-description, .item-source-description, .item-rights-description, .item-rights-owner, .item-coverage-made-in, .item-coverage-owner, .item-accession-number, .item-format-description {
+  font-size: 20px;
+  margin-top: 20px;
+  line-height: 1.6;
+  margin-top: 0; }
+
+.item-source-heading, .item-rights-heading, .item-coverage-heading, .item-format-heading {
+  color: #2e7dc1;
+  font-size: 28px;
+  margin-bottom: 0;
+  margin-top: 20px; }
+
+.item-tombstone-card {
+  background-color: #f2f2f2;
+  margin-top: 40px;
+  margin-bottom: 80px; }
+
+.item-tombstone-card-description {
+  font-size: 20px;
+  line-height: 2;
+  padding: 40px; }
 
 /*# sourceMappingURL=main.css.map */
