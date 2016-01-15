@@ -8,6 +8,10 @@ a.disabled {
 	pointer-events: none;
 }
 
+:focus {
+	outline-width: 0px;
+}
+
 img, video {
 	max-width: 100%;
 }
