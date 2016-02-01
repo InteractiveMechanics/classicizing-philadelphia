@@ -646,4 +646,64 @@ footer {
   .involved-form-submit:hover, .involved-form-submit:active, .involved-form-submit:focus, .involved-form-submit:active:focus {
     color: #1d507c; }
 
+.search-page {
+  background-color: #ffffff;
+  padding-top: 80px;
+  padding-bottom: 60px; }
+
+.search-page-heading {
+  font-size: 45px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #2e7dc1;
+  display: inline-block; }
+
+.search-results-number {
+  display: inline-block;
+  margin-left: 10px;
+  font-size: 22px;
+  color: #7a7765; }
+
+.search-form {
+  margin-top: 30px;
+  margin-bottom: 60px; }
+
+.search-form-inputs, .search-form-submit-btn {
+  height: 60px;
+  background-color: #f1f2f2;
+  border: 1px solid #f1f2f2;
+  box-shadow: none; }
+
+.search-form-inputs {
+  font-size: 24px;
+  color: #404041;
+  margin-bottom: 40px; }
+  .search-form-inputs:focus, .search-form-inputs:active:focus {
+    box-shadow: none;
+    border-color: transparent; }
+
+.search-form-submit-btn {
+  color: #2e7dc1;
+  text-transform: uppercase;
+  font-family: "PT Sans Narrow", sans-serif;
+  font-size: 18px; }
+  .search-form-submit-btn:hover, .search-form-submit-btn:focus, .search-form-submit-btn:active:focus {
+    color: #1d507c;
+    box-shadow: none;
+    border-color: transparent;
+    background-color: #f1f2f2; }
+
+.search-results-table {
+  font-family: "Open Sans Condensed", sans-serif;
+  font-size: 18px;
+  border-color: red; }
+
+.search-results-link {
+  color: #404041; }
+  .search-results-link:hover, .search-results-link:focus, .search-results-link:active, .search-results-link:active:focus {
+    color: #19191a; }
+
+.search-results-table-row {
+  border-top: 1px solid transparent !important; }
+
 /*# sourceMappingURL=main.css.map */
