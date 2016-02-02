@@ -48,8 +48,8 @@
   	align-items: center;
   	justify-content: center;
   	&:hover, &:active, &:focus, &:active:focus {
-  		color: $blue;
-  	}
+  		color: $dark-taupe;
+  	 }
 }
 
 .thumbnail-caption-featured-collection {
@@ -57,8 +57,11 @@
 	margin-top: 0;
 }
 
-.thumbnail-link {
-	transition: $transition;
-}
 
+
+.thumbnail-caption-story {
+	padding-left: 25px;
+	padding-right: 25px;
+	text-align: center;
+}
 

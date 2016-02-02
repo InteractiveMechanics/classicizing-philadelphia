@@ -1,0 +1,35 @@
+.stories-page {
+	background-color: #dedede;
+}
+
+.stories-jumbotron {
+	background-color: #fff;
+}
+
+.stories-jumbotron-slider-text-subheading {
+	color: $blue;
+	margin-top: 40px;
+}
+
+.jumbotron-slider-text-featured-story {
+	color: $blue;
+	letter-spacing: 1.5px;
+	margin-bottom: 40px;
+	@include page-heading();
+}
+
+.stories-jumbotron-slider-text {
+	width: 50%;
+	float: left;
+	text-align: center;
+	text-transform: uppercase;
+	padding-left: 100px;
+	padding-right: 100px;
+}
+
+.stories-jumbotron-summary {
+	text-transform: initial;
+	text-align: initial;
+	padding-bottom: 80px;
+}
+

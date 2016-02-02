@@ -71,3 +71,7 @@
 .collections-page .jumbotron-slider-text-link  {
 	@include anchor-link($red, $dark-red);
 }
+
+.stories-page .jumbotron-slider-text-link {
+	@include anchor-link($blue, $dark-blue);
+}
