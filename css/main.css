@@ -68,13 +68,23 @@ section {
 
 .navbar-brand {
   height: 90px; }
+  @media (max-width: 320px) {
+    .navbar-brand {
+      height: 110px;
+      padding: 20px 10px; } }
 
 .navbar-default .navbar-nav > li > a {
   color: #f1f2f2;
   transition: all 0.25s ease-in-out;
   position: relative; }
+  @media (max-width: 320px) {
+    .navbar-default .navbar-nav > li > a {
+      padding: 10px 30px; } }
   .navbar-default .navbar-nav > li > a:hover {
     color: #f1f2f2; }
+    @media (max-width: 320px) {
+      .navbar-default .navbar-nav > li > a:hover {
+        background-color: rgba(171, 171, 171, 0.45); } }
     .navbar-default .navbar-nav > li > a:hover:after {
       content: "";
       border-bottom: 4px solid #f1f2f2;
@@ -83,6 +93,9 @@ section {
       left: 0;
       margin-left: 15px;
       right: 15px; }
+      @media (max-width: 320px) {
+        .navbar-default .navbar-nav > li > a:hover:after {
+          border-bottom: 1px solid rgba(171, 171, 171, 0.45); } }
 
 .navbar-text {
   margin-left: 0;
@@ -167,6 +180,27 @@ h1 {
 .reset-btn:hover #reset-icon {
   fill: #f1f2f2;
   opacity: 1.0; }
+
+.navbar-toggle {
+  float: left;
+  margin-top: 0px;
+  margin-left: 15px;
+  margin-right: 0;
+  margin-bottom: 0px;
+  border-radius: 0px;
+  padding: 12px 12px; }
+
+.navbar-default .navbar-toggle {
+  border-top-color: transparent;
+  border-left-color: transparent;
+  border-bottom-color: transparent;
+  border-right-color: #888; }
+
+.navbar-toggle .icon-bar {
+  width: 27px;
+  height: 2px;
+  margin-top: 4px;
+  margin-bottom: 5px; }
 
 footer {
   padding-top: 80px;

@@ -24,6 +24,10 @@
 
 .navbar-brand {
 	height: 90px;
+	@include mobile-portrait {
+		height: 110px;
+		padding: 20px 10px;
+	}
 }
 
 
@@ -31,8 +35,15 @@
 	color: $white;
 	transition: $transition;
 	position: relative;
+	@include mobile-portrait {
+		padding: 10px 30px;
+
+	}
 	&:hover {
 		color: $white;
+		@include mobile-portrait {
+			background-color: rgba(171, 171, 171, 0.45);
+		}
 		&:after {
 		content: "";
 		border-bottom: 4px solid $white;
@@ -41,6 +52,9 @@
 		left: 0;
 		margin-left: 15px;
 		right: 15px;
+		@include mobile-portrait {
+			border-bottom: 1px solid rgba(171, 171, 171, 0.45);
+			}
 		}
 	}
 }
@@ -144,4 +158,30 @@ h1 {
 .reset-btn:hover #reset-icon {
 	fill: $white;
 	opacity: 1.0;
+}
+
+.navbar-toggle {
+	float: left;
+	margin-top: 0px;
+	margin-left: 15px;
+	margin-right: 0;
+	margin-bottom: 0px;
+	border-radius: 0px;
+	padding: 12px 12px;
+
+}
+
+.navbar-default .navbar-toggle {
+	border-top-color: transparent;
+	border-left-color: transparent;
+	border-bottom-color: transparent;
+	border-right-color: #888;
+
+}
+
+.navbar-toggle .icon-bar {
+	width: 27px;
+	height: 2px;
+	margin-top: 4px;
+	margin-bottom: 5px;
 }

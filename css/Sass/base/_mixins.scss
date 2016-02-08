@@ -10,3 +10,27 @@
 @mixin page-heading() {
 	font-size: 45px;
 }
+
+@mixin tablet {
+	@media (min-width: #{$tablet-height}) and (max-width: #{$tablet-width - 1px}) {
+		@content;
+	}
+}
+
+@mixin mobile-landscape {
+	@media (min-width: #{$mobile-portrait + 1px}) and (max-width: #{$mobile-landscape}) {
+		@content;
+	}
+}
+
+@mixin mobile-portrait {
+	@media (max-width: #{$mobile-portrait}) {
+		@content;
+	}
+}
+
+@mixin not-desktop {
+	@media (max-width: #{$tablet-width}) {
+		@content;
+	}
+}
