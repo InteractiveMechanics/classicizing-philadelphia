@@ -26,8 +26,11 @@ $(document).ready(function(){
   	});
   });
 
-  
-
+  $(function() {
+    if (window.matchMedia("(max-width: 320px)").matches) {
+      $('.no-collapse').removeClass('pull-right').addClass('.pull-left');
+    }
+  });
   
 });
 				
