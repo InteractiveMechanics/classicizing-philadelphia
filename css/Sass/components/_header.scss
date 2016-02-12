@@ -33,6 +33,10 @@
 		height: 110px;
 		padding: 20px 10px;
 	}
+	@include mobile-landscape {
+		height: 110px;
+		padding: 20px 10px;
+	}
 }
 
 
@@ -44,9 +48,15 @@
 		padding: 10px 30px;
 
 	}
+	@include mobile-landscape {
+		padding: 10px 30px;
+	}
 	&:hover {
 		color: $white;
 		@include mobile-portrait {
+			background-color: rgba(171, 171, 171, 0.45);
+		}
+		@include mobile-landscape {
 			background-color: rgba(171, 171, 171, 0.45);
 		}
 		&:after {
@@ -133,6 +143,11 @@ h1 {
 		width: 180px !important;
 		margin-left: 44px;
 	}
+	@include mobile-landscape {
+		display: inline-block;
+		margin-left: 44px;
+		width: 340px !important;
+	}
 }
 
 .search-btn-move {
@@ -145,6 +160,9 @@ h1 {
 	}
 	@include mobile-portrait {
 		right: 223px;
+	}
+	@include mobile-landscape {
+		left: 53px;
 	}
 }
 
@@ -167,6 +185,9 @@ h1 {
 		transition: $transition;
 	}
 	@include mobile-portrait {
+		margin-top: -9px;
+	}
+	@include mobile-landscape {
 		margin-top: -9px;
 	}
 }
@@ -210,12 +231,25 @@ h1 {
 		margin-right: 15px;
 		padding: 16px;
 	}
+	@include mobile-landscape {
+		display: inline-block;
+		float: right;
+		margin-right: 25px;
+		padding: 16px;
+	}
 }
 
 .search-icon {
 	margin-top: 0px;
 	margin-bottom: 0px;
 	@include mobile-portrait {
+		margin-left: 15px;
+		display: inline-block;
+		padding: 0;
+		border-top: none;
+		border-bottom: none;
+	}
+	@include mobile-landscape {
 		margin-left: 15px;
 		display: inline-block;
 		padding: 0;

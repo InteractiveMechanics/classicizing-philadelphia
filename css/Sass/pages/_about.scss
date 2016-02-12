@@ -2,6 +2,12 @@
 	background-color: $white;
 	padding-top: 80px;
 	padding-bottom: 60px;
+	@include mobile-portrait {
+		padding-top: 50px;
+	}
+	@include mobile-landscape {
+		padding-top: 50px;
+	}
 }
 
 .about-page-heading {
@@ -10,6 +16,12 @@
 	text-transform: uppercase;
 	color: $blue;
 	justify-content: center;
+	@include mobile-portrait {
+		font-size: 36px;
+	}
+	@include mobile-landscape {
+		font-size: 36px;
+	}
 }
 
 .about-page-container {
@@ -17,11 +29,28 @@
 	margin-right: 30px;
 	font-size: 20px;
 	line-height: 1.6;
+	@include mobile-portrait {
+		margin-left: 10px;
+		margin-right: 10px;
+		font-size: 16px;	
+		padding-top: 30px;
+	}
+	@include mobile-landscape {
+		margin-left: 10px;
+		margin-right: 10px;
+		padding-top: 30px;
+	}
 }
 
 .about-page-subheading {
 	color: $blue;
 	margin-top: 40px;
+	@include mobile-portrait {
+		margin-top: 20px;
+	}
+	@include mobile-landscape {
+		margin-top: 20px;
+	}
 }
 
 .about-page-text {

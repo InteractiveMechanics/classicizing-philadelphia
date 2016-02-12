@@ -9,6 +9,9 @@
 .stories-jumbotron-slider-text-subheading {
 	color: $blue;
 	margin-top: 40px;
+	@include mobile-portrait {
+		margin-top: 0px;
+	}
 }
 
 .jumbotron-slider-text-featured-story {
@@ -16,6 +19,9 @@
 	letter-spacing: 1.5px;
 	margin-bottom: 40px;
 	@include page-heading();
+	@include mobile-portrait {
+		font-size: 38px;
+	}
 }
 
 .stories-jumbotron-slider-text {
@@ -25,11 +31,19 @@
 	text-transform: uppercase;
 	padding-left: 100px;
 	padding-right: 100px;
+	@include mobile-portrait {
+		width: 100%;
+		padding-left: 30px;
+		padding-right: 30px;
+	}
 }
 
 .stories-jumbotron-summary {
 	text-transform: initial;
 	text-align: initial;
 	padding-bottom: 80px;
+	@include mobile-portrait {
+		padding-bottom: 20px;
+	}
 }
 

@@ -12,18 +12,30 @@
 	float: left;
 	background: #f1f2f2;
 	padding: 60px;
+	@include mobile-portrait {
+		width: 100%;
+		height: auto;
+		padding: 30px;
+	}
 }
 
 
 .homepage-about-heading {
 	color: $blue;
 	font-family: $pt-sans;
+	@include mobile-portrait {
+		font-size: 24px;
+	}
 }
 
 .homepage-about-content {
 	margin-top: 20px;
 	font-size: 20px;
 	line-height: 1.6;
+	@include mobile-portrait {
+		margin-top: 15px;
+		font-size: 16px;
+	}
 }
 
 .homepage-thumbnails-container {
@@ -32,6 +44,9 @@
 	padding-bottom: 0;
 	margin-left: 1%;
 	float: right;
+	@include mobile-portrait {
+		width: 100%;
+	}
 }
 
 

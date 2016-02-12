@@ -9,6 +9,11 @@
 
 .item-description-container {
 	padding: 75px 75px 60px 75px;
+	@include mobile-portrait {
+		padding: 50px;
+		padding-left: 30px;
+		padding-right: 30px;
+	}
 }
 
 .item-name {
@@ -19,12 +24,18 @@
 	letter-spacing: 1.75px;
 	font-size: 42px;
 	margin-bottom: 30px;
+	@include mobile-portrait {
+		font-size: 30px;
+	}
 }
 
 .item-year {
 	display: inline-block;
 	color: $taupe;
 	margin-left: 10px;
+	@include mobile-portrait {
+		font-size: 20px;
+	}
 }
 
 .item-description, .item-source-description, .item-rights-description, .item-rights-owner, .item-coverage-made-in, .item-coverage-owner, .item-accession-number, .item-format-description {
@@ -32,6 +43,9 @@
 	margin-top: 30px;
 	line-height: 1.6;
 	margin-top: 0;
+	@include mobile-portrait {
+		font-size: 16px;
+	}
 }
 
 .item-source-heading, .item-rights-heading, .item-coverage-heading, .item-format-heading {
@@ -45,11 +59,18 @@
 	background-color: #f2f2f2;
 	margin-top: 40px;
 	margin-bottom: 80px;
+	@include mobile-portrait {
+		margin-bottom: 40px;
+	}
 }
 
 .item-tombstone-card-description {
 	font-size: 20px;
 	line-height: 2;
 	padding: 40px;
+	@include mobile-portrait {
+		padding: 15px;
+		font-size: 16px;
+	}
 
 }

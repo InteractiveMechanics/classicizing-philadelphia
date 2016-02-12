@@ -19,6 +19,11 @@
 	height: 275px;
 	padding: 0;
 	border: none;
+	@include mobile-portrait {
+		width: 100%;
+		margin-top: 20px;
+		margin-bottom: 20px;
+	}
 }
 
 
@@ -29,6 +34,9 @@
 	height: 100%;
 	float: left;
 	background: #777777;
+	@include mobile-portrait {
+		width: 100%;
+	}
 }
 
 .thumbnail-caption-container {
@@ -49,6 +57,11 @@
   	justify-content: center;
   	&:hover, &:active, &:focus, &:active:focus {
   		color: $dark-taupe;
+  	 }
+  	 @include mobile-portrait {
+  	 	width: 100%;
+  	 	background-color: rgba(242, 241, 241, 0.5);
+  	 	margin-top: -275px;
   	 }
 }
 

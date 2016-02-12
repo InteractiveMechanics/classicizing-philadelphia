@@ -27,10 +27,12 @@ $(document).ready(function(){
   });
 
   $(function() {
-    if (window.matchMedia("(max-width: 320px)").matches) {
+    if (window.matchMedia("(max-width: 536px)").matches) {
       $('.no-collapse').removeClass('pull-right').addClass('.pull-left');
+      $('.filters-container').hide();
     }
   });
   
+
 });
 				

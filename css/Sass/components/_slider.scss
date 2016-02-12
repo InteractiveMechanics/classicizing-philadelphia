@@ -9,6 +9,11 @@
 	float: right;
 	margin-top: -105px;
 	width: 50%;
+	@include mobile-portrait {
+		float: none;
+		width: 100%;
+		margin-top: 10px;
+	}
 }
 
 .slick-dots li button:before {
@@ -33,6 +38,12 @@
 	//height: 600px;
 	float: left;
 	background: #eee;
+	@include mobile-portrait {
+		width: 100%;
+	}
+	@include mobile-landscape {
+		width: 100%;
+	}
 }
 
 .jumbotron-slider-text {
@@ -42,10 +53,26 @@
 	text-transform: uppercase;
 	padding-left: 160px;
 	padding-right: 160px;
+	@include mobile-portrait {
+		width: 100%;
+		padding-left: 40px;
+		padding-right: 40px;
+	}
+	@include mobile-landscape {
+		width: 100%;
+		padding-left: 40px;
+		padding-right: 40px;
+	}
 }
 
 .homepage-page .jumbotron-slider-text {
 	color: $blue;
+	@include mobile-portrait {
+		padding-bottom: 10px;
+	}
+	@include mobile-landscape {
+		padding-bottom: 10px;
+	}
 }
 
 .collections-page .jumbotron-slider-text {
@@ -57,15 +84,35 @@
 	font-weight: 300;
 	font-family: $open-sans;
 	letter-spacing: 1px;
+	@include mobile-portrait {
+		padding-top: 0px;
+	}
+	@include mobile-landscape {
+		padding-top: 0px;
+	}
 }
 
 .jumbotron-slider-text-featured-collection {
 	@include page-heading();
 	padding-bottom: 100px;
+	@include mobile-portrait {
+		padding-bottom: 60px;
+		font-size: 38px;
+	}
+	@include mobile-landscape {
+		padding-bottom: 60px;
+		font-size: 38px;
+	}
 }
 
 .homepage-page .jumbotron-slider-text-link  {
 	@include anchor-link($blue, $dark-blue);
+	@include mobile-portrait {
+		margin-top: 20px;
+	}
+	@include mobile-landscape {
+		margin-top: 20px;
+	}
 }
 
 .collections-page .jumbotron-slider-text-link  {

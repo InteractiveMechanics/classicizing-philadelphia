@@ -9,11 +9,27 @@
 	text-align: center;
 	text-transform: uppercase;
 	color: $blue;
+	@include mobile-portrait {
+		padding-left: 40px;
+		padding-right: 40px;
+		font-size: 36px;
+	}
+	@include mobile-landscape {
+		padding-left: 40px;
+		padding-right: 40px;
+		font-size: 36px;
+	}
 }
 
 .collections-jumbotron-text-container {
 	width: 50%;
 	float: left;
+	@include mobile-portrait {
+		width: 100%;
+	}
+	@include mobile-landscape {
+		width: 100%;
+	}
 }
 
 .collections-jumbotron-page-summary {
@@ -21,10 +37,28 @@
 	padding-left: 80px;
 	padding-right: 80px;
 	line-height: 1.7;
+	@include mobile-portrait {
+		padding-left: 40px;
+		padding-right: 40px;
+		margin-top: 30px;
+		font-size: 18px !important;
+	}
+	@include mobile-landscape {
+		padding-left: 40px;
+		padding-right: 40px;
+		margin-top: 30px;
+		font-size: 20px !important;
+	}
 }
 
 .item-counter {
 	display: inline-block;
+	@include mobile-portrait {
+		margin-left: 15px;
+	}
+	@include mobile-landscape {
+		margin-left: 15px;
+	}
 }
 
 .filter-section {
@@ -101,11 +135,17 @@
 
 .vertical-thumbnail {
 	margin-bottom: 30px;
+	@include mobile-portrait {
+		margin-left: 10px;
+	}
 }
 
 .vertical-thumbnail-img {
 	width: 100%;
 	// height: 235px;
+	@include mobile-landscape {
+		text-align: center;
+	}
 }
 
 .vertical-thumbnail-caption-container {
@@ -119,6 +159,10 @@
 	padding: 50px;
 	display: flex;
 	letter-spacing: 1.75px;
+	@include mobile-landscape {
+		margin-left: 82px;
+		margin-right: 82px;
+	}
 }
 
 
