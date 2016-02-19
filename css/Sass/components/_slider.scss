@@ -4,6 +4,13 @@
 	overflow: auto;
 }
 
+.slick-slider {
+	@include tablet {
+		margin-bottom: 0px;
+	}
+}
+
+
 .slick-dots {
 	position: initial;
 	float: right;
@@ -15,6 +22,7 @@
 		margin-top: 10px;
 	}
 }
+
 
 .slick-dots li button:before {
 	font-size: 16px;
@@ -63,6 +71,9 @@
 		padding-left: 40px;
 		padding-right: 40px;
 	}
+	@include tablet {
+		padding: 0px 50px;
+	}
 }
 
 .homepage-page .jumbotron-slider-text {
@@ -103,6 +114,10 @@
 		padding-bottom: 60px;
 		font-size: 38px;
 	}
+	@include tablet {
+		padding-bottom: 10px;
+		font-size: 36px;
+	}
 }
 
 .homepage-page .jumbotron-slider-text-link  {
@@ -117,6 +132,7 @@
 
 .collections-page .jumbotron-slider-text-link  {
 	@include anchor-link($red, $dark-red);
+	
 }
 
 .stories-page .jumbotron-slider-text-link {

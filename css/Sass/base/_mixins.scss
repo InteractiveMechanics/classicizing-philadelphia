@@ -11,6 +11,7 @@
 	font-size: 45px;
 }
 
+
 @mixin tablet {
 	@media (min-width: #{$tablet-height}) and (max-width: #{$tablet-width - 1px}) {
 		@content;

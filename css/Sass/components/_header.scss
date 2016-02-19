@@ -37,6 +37,9 @@
 		height: 110px;
 		padding: 20px 10px;
 	}
+	@include tablet {
+		height: 96px;
+	}
 }
 
 
@@ -46,10 +49,15 @@
 	position: relative;
 	@include mobile-portrait {
 		padding: 10px 30px;
+		border-bottom: 1px solid #777777;
 
 	}
 	@include mobile-landscape {
 		padding: 10px 30px;
+		border-bottom: 1px solid #777777;
+	}
+	@include tablet {
+		padding: 15px 18px;
 	}
 	&:hover {
 		color: $white;
@@ -71,6 +79,15 @@
 			border-bottom: 1px solid rgba(171, 171, 171, 0.45);
 			}
 		}
+	}
+}
+
+.navbar-nav {
+	@include mobile-portrait {
+		margin: 0px -15px;
+	}
+	@include mobile-landscape {
+		margin: 0px -15px;
 	}
 }
 
@@ -146,7 +163,10 @@ h1 {
 	@include mobile-landscape {
 		display: inline-block;
 		margin-left: 44px;
-		width: 340px !important;
+		width: calc(100vw - 140px) !important;
+	}
+	@include tablet {
+		width: 164px !important;
 	}
 }
 
@@ -163,6 +183,9 @@ h1 {
 	}
 	@include mobile-landscape {
 		left: 53px;
+	}
+	@include tablet {
+		right: 207px;
 	}
 }
 
@@ -255,6 +278,13 @@ h1 {
 		padding: 0;
 		border-top: none;
 		border-bottom: none;
+	}
+}
+
+.navbar-collapse {
+	@include tablet {
+		padding-left: 0;
+		padding-right: 0;
 	}
 }
 
