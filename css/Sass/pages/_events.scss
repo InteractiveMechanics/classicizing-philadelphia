@@ -5,6 +5,9 @@
 	@include mobile-portrait {
 		padding-top: 50px;
 	}
+	@include mobile-landscape {
+		padding-top: 50px;
+	}
 }
 
 .events-page-heading {
@@ -15,6 +18,9 @@
 	justify-content: center;
 	margin-bottom: 0;
 	@include mobile-portrait {
+		font-size: 36px;
+	}
+	@include mobile-landscape {
 		font-size: 36px;
 	}
 }
@@ -43,6 +49,9 @@
 	font-size: 18px;
 	color: $taupe;
 	@include mobile-portrait {
+		margin-top: 20px;
+	}
+	@include mobile-landscape {
 		margin-top: 20px;
 	}
 }

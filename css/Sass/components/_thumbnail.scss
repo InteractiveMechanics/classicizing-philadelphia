@@ -24,6 +24,11 @@
 		margin-top: 20px;
 		margin-bottom: 20px;
 	}
+	@include mobile-landscape {
+		width: 100%;
+		margin-top: 20px;
+		margin-bottom: 20px;
+	}
 }
 
 
@@ -35,6 +40,9 @@
 	float: left;
 	background: #777777;
 	@include mobile-portrait {
+		width: 100%;
+	}
+	@include mobile-landscape {
 		width: 100%;
 	}
 }
@@ -63,6 +71,12 @@
   	 	background-color: rgba(242, 241, 241, 0.5);
   	 	margin-top: -275px;
   	 }
+  	 @include mobile-landscape {
+  	 	width: 100%;
+  	 	background-color: rgba(242, 241, 241, 0.5);
+  	 	margin-top: -275px;
+  	 }
+
 }
 
 .thumbnail-caption-featured-collection {

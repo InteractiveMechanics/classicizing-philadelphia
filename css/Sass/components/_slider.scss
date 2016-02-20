@@ -21,6 +21,12 @@
 		width: 100%;
 		margin-top: 10px;
 	}
+	@include mobile-landscape {
+		float: none;
+		width: 100%;
+		margin-top: 10px;
+		padding-bottom: 40px;
+	}
 }
 
 
@@ -88,6 +94,12 @@
 
 .collections-page .jumbotron-slider-text {
 	color: $red;
+	@include mobile-portrait {
+		padding-bottom: 10px;
+	}
+	@include mobile-landscape {
+		padding-bottom: 10px;
+	}
 }
 
 .jumbotron-slider-text-subheading {
@@ -111,7 +123,7 @@
 		font-size: 38px;
 	}
 	@include mobile-landscape {
-		padding-bottom: 60px;
+		padding-bottom: 20px;
 		font-size: 38px;
 	}
 	@include tablet {

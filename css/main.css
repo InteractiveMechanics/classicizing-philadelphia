@@ -340,6 +340,12 @@ footer {
       float: none;
       width: 100%;
       margin-top: 10px; } }
+  @media (min-width: 321px) and (max-width: 536px) {
+    .slick-dots {
+      float: none;
+      width: 100%;
+      margin-top: 10px;
+      padding-bottom: 40px; } }
 
 .slick-dots li button:before {
   font-size: 16px; }
@@ -396,6 +402,12 @@ footer {
 
 .collections-page .jumbotron-slider-text {
   color: #A2302E; }
+  @media (max-width: 320px) {
+    .collections-page .jumbotron-slider-text {
+      padding-bottom: 10px; } }
+  @media (min-width: 321px) and (max-width: 536px) {
+    .collections-page .jumbotron-slider-text {
+      padding-bottom: 10px; } }
 
 .jumbotron-slider-text-subheading {
   padding-top: 80px;
@@ -418,7 +430,7 @@ footer {
       font-size: 38px; } }
   @media (min-width: 321px) and (max-width: 536px) {
     .jumbotron-slider-text-featured-collection {
-      padding-bottom: 60px;
+      padding-bottom: 20px;
       font-size: 38px; } }
   @media (min-width: 768px) and (max-width: 1023px) {
     .jumbotron-slider-text-featured-collection {
@@ -473,6 +485,11 @@ footer {
       width: 100%;
       margin-top: 20px;
       margin-bottom: 20px; } }
+  @media (min-width: 321px) and (max-width: 536px) {
+    .thumbnail-50 {
+      width: 100%;
+      margin-top: 20px;
+      margin-bottom: 20px; } }
 
 .thumbnail-img {
   width: 50%;
@@ -480,6 +497,9 @@ footer {
   float: left;
   background: #777777; }
   @media (max-width: 320px) {
+    .thumbnail-img {
+      width: 100%; } }
+  @media (min-width: 321px) and (max-width: 536px) {
     .thumbnail-img {
       width: 100%; } }
 
@@ -501,6 +521,11 @@ footer {
   .thumbnail-caption:hover, .thumbnail-caption:active, .thumbnail-caption:focus, .thumbnail-caption:active:focus {
     color: #545245; }
   @media (max-width: 320px) {
+    .thumbnail-caption {
+      width: 100%;
+      background-color: rgba(242, 241, 241, 0.5);
+      margin-top: -275px; } }
+  @media (min-width: 321px) and (max-width: 536px) {
     .thumbnail-caption {
       width: 100%;
       background-color: rgba(242, 241, 241, 0.5);
@@ -531,6 +556,11 @@ footer {
       width: 100%;
       height: auto;
       padding: 30px; } }
+  @media (min-width: 321px) and (max-width: 536px) {
+    .homepage-about {
+      width: 100%;
+      height: auto;
+      padding: 30px; } }
 
 .homepage-about-heading {
   color: #2e7dc1;
@@ -555,6 +585,9 @@ footer {
   margin-left: 1%;
   float: right; }
   @media (max-width: 320px) {
+    .homepage-thumbnails-container {
+      width: 100%; } }
+  @media (min-width: 321px) and (max-width: 536px) {
     .homepage-thumbnails-container {
       width: 100%; } }
 
@@ -858,6 +891,9 @@ footer {
   @media (max-width: 320px) {
     .events-page {
       padding-top: 50px; } }
+  @media (min-width: 321px) and (max-width: 536px) {
+    .events-page {
+      padding-top: 50px; } }
 
 .events-page-heading {
   font-size: 45px;
@@ -867,6 +903,9 @@ footer {
   justify-content: center;
   margin-bottom: 0; }
   @media (max-width: 320px) {
+    .events-page-heading {
+      font-size: 36px; } }
+  @media (min-width: 321px) and (max-width: 536px) {
     .events-page-heading {
       font-size: 36px; } }
 
@@ -892,6 +931,9 @@ footer {
   font-size: 18px;
   color: #7a7765; }
   @media (max-width: 320px) {
+    .events-page-date {
+      margin-top: 20px; } }
+  @media (min-width: 321px) and (max-width: 536px) {
     .events-page-date {
       margin-top: 20px; } }
 
@@ -1076,6 +1118,9 @@ footer {
   @media (max-width: 320px) {
     .stories-jumbotron-slider-text-subheading {
       margin-top: 0px; } }
+  @media (min-width: 321px) and (max-width: 536px) {
+    .stories-jumbotron-slider-text-subheading {
+      margin-top: 0px; } }
 
 .jumbotron-slider-text-featured-story {
   color: #2e7dc1;
@@ -1083,6 +1128,9 @@ footer {
   margin-bottom: 40px;
   font-size: 45px; }
   @media (max-width: 320px) {
+    .jumbotron-slider-text-featured-story {
+      font-size: 38px; } }
+  @media (min-width: 321px) and (max-width: 536px) {
     .jumbotron-slider-text-featured-story {
       font-size: 38px; } }
 
@@ -1098,12 +1146,20 @@ footer {
       width: 100%;
       padding-left: 30px;
       padding-right: 30px; } }
+  @media (min-width: 321px) and (max-width: 536px) {
+    .stories-jumbotron-slider-text {
+      width: 100%;
+      padding-left: 30px;
+      padding-right: 30px; } }
 
 .stories-jumbotron-summary {
   text-transform: initial;
   text-align: initial;
   padding-bottom: 80px; }
   @media (max-width: 320px) {
+    .stories-jumbotron-summary {
+      padding-bottom: 20px; } }
+  @media (min-width: 321px) and (max-width: 536px) {
     .stories-jumbotron-summary {
       padding-bottom: 20px; } }
 

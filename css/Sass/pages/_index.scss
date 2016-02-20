@@ -17,6 +17,11 @@
 		height: auto;
 		padding: 30px;
 	}
+	@include mobile-landscape {
+		width: 100%;
+		height: auto;
+		padding: 30px;
+	}
 }
 
 
@@ -45,6 +50,9 @@
 	margin-left: 1%;
 	float: right;
 	@include mobile-portrait {
+		width: 100%;
+	}
+	@include mobile-landscape {
 		width: 100%;
 	}
 }
