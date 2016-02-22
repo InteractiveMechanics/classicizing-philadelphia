@@ -25,6 +25,9 @@
 .navbar-default .navbar-collapse {
 	border: none;
 	position: relative;
+	@include mobile-large {
+		width: 100%;
+	}
 }
 
 .navbar-brand {
@@ -34,6 +37,10 @@
 		padding: 20px 10px;
 	}
 	@include mobile-landscape {
+		height: 110px;
+		padding: 20px 10px;
+	}
+	@include mobile-large {
 		height: 110px;
 		padding: 20px 10px;
 	}
@@ -56,6 +63,10 @@
 		padding: 10px 30px;
 		border-bottom: 1px solid #777777;
 	}
+	@include mobile-large {
+		padding: 10px 30px;
+		border-bottom: 1px solid #777777;
+	}
 	@include tablet {
 		padding: 15px 18px;
 	}
@@ -67,6 +78,10 @@
 		@include mobile-landscape {
 			background-color: rgba(171, 171, 171, 0.45);
 		}
+		@include mobile-large {
+			background-color: rgba(171, 171, 171, 0.45);
+		}
+
 		&:after {
 		content: "";
 		border-bottom: 4px solid $white;
@@ -88,6 +103,13 @@
 	}
 	@include mobile-landscape {
 		margin: 0px -15px;
+	}
+	@include mobile-large {
+		margin: 0px -15px;
+	}
+	@include tablet {
+		margin: 0px -15px;
+		padding-left: 15px;
 	}
 }
 
@@ -135,6 +157,9 @@ h1 {
 		background-color: $light-black;
 		transition: $transition;
 	}
+	@include mobile-large {
+		margin-right: 15px;
+	}
 }
 
 .search-btn:hover #search-icon {
@@ -165,6 +190,12 @@ h1 {
 		margin-left: 44px;
 		width: calc(100vw - 140px) !important;
 	}
+	@include mobile-large {
+		display: inline-block;
+		position: relative;
+		right: 45px;
+		width: calc(100vw - 140px) !important;
+	}
 	@include tablet {
 		width: 164px !important;
 	}
@@ -182,6 +213,9 @@ h1 {
 		right: 223px;
 	}
 	@include mobile-landscape {
+		left: 53px;
+	}
+	@include mobile-large {
 		left: 53px;
 	}
 	@include tablet {
@@ -212,6 +246,11 @@ h1 {
 	}
 	@include mobile-landscape {
 		margin-top: -9px;
+	}
+	@include mobile-large {
+		margin-top: -9px;
+		position: relative;
+		right: 44px;
 	}
 }
 
@@ -260,6 +299,12 @@ h1 {
 		margin-right: 25px;
 		padding: 16px;
 	}
+	@include mobile-large {
+		display: inline-block;
+		float: right;
+		margin-right: 25px;
+		padding: 16px;
+	}
 }
 
 .search-icon {
@@ -273,6 +318,13 @@ h1 {
 		border-bottom: none;
 	}
 	@include mobile-landscape {
+		margin-left: 15px;
+		display: inline-block;
+		padding: 0;
+		border-top: none;
+		border-bottom: none;
+	}
+	@include mobile-large {
 		margin-left: 15px;
 		display: inline-block;
 		padding: 0;

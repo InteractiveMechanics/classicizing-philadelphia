@@ -29,6 +29,9 @@ $(document).ready(function(){
   $(function() {
     if (window.matchMedia("(max-width: 536px)").matches) {
       $('.no-collapse').removeClass('pull-right').addClass('.pull-left');
+      // $('.filters-container').hide();
+    }
+    if (window.matchMedia("(max-width: 756px)").matches) {
       $('.filters-container').hide();
     }
   });

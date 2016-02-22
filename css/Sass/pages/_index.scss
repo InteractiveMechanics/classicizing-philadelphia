@@ -22,6 +22,16 @@
 		height: auto;
 		padding: 30px;
 	}
+	@include mobile-large {
+		width: 100%;
+		height: auto;
+		padding: 30px;
+	}
+	@include tablet {
+		width: 100%;
+		height: auto;
+		padding: 30px;
+	}
 }
 
 
@@ -53,6 +63,12 @@
 		width: 100%;
 	}
 	@include mobile-landscape {
+		width: 100%;
+	}
+	@include mobile-large {
+		width: 100%;
+	}
+	@include tablet {
 		width: 100%;
 	}
 }

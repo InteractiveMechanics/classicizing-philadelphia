@@ -5,14 +5,29 @@
 .item-image {
 	padding-left: 0;
 	padding-right: 0;
+	@include mobile-large {
+		text-align: center;
+		width: 100%;
+	}
+	@include tablet {
+		text-align: center;
+		width: 100%;
+	}
 }
 
 .item-description-container {
 	padding: 75px 75px 60px 75px;
 	@include mobile-portrait {
-		padding: 50px;
-		padding-left: 30px;
-		padding-right: 30px;
+		padding: 50px 30px;
+	}
+	@include mobile-landscape {
+		padding: 50px 30px;
+	}
+	@include mobile-large {
+		width: 100%;
+	}
+	@include tablet {
+		width: 100%;
 	}
 }
 
@@ -27,6 +42,9 @@
 	@include mobile-portrait {
 		font-size: 30px;
 	}
+	@include mobile-landscape {
+		font-size: 30px;
+	}
 }
 
 .item-year {
@@ -34,6 +52,9 @@
 	color: $taupe;
 	margin-left: 10px;
 	@include mobile-portrait {
+		font-size: 20px;
+	}
+	@include mobile-landscape {
 		font-size: 20px;
 	}
 }
@@ -46,6 +67,9 @@
 	@include mobile-portrait {
 		font-size: 16px;
 	}
+	@include mobile-landscape {
+		font-size: 16px;
+	}
 }
 
 .item-source-heading, .item-rights-heading, .item-coverage-heading, .item-format-heading {
@@ -53,6 +77,14 @@
 	font-size: 28px;
 	margin-bottom: 0;
 	margin-top: 30px;
+	@include mobile-portrait {
+		font-size: 24px;
+		margin-bottom: 5px;
+	}
+	@include mobile-landscape {
+		font-size: 24px;
+		margin-bottom: 5px;
+	}
 }
 
 .item-tombstone-card {
@@ -62,6 +94,9 @@
 	@include mobile-portrait {
 		margin-bottom: 40px;
 	}
+	@include mobile-landscape {
+		margin-bottom: 40px;
+	}
 }
 
 .item-tombstone-card-description {
@@ -69,6 +104,10 @@
 	line-height: 2;
 	padding: 40px;
 	@include mobile-portrait {
+		padding: 15px;
+		font-size: 16px;
+	}
+	@include mobile-landscape {
 		padding: 15px;
 		font-size: 16px;
 	}

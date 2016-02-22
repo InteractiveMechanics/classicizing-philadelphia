@@ -2,6 +2,15 @@
 	background-color: #dedede;
 }
 
+.jumbotron-slider-img-collectionsshow {
+	@include mobile-large {
+		width: 100%;
+		float: none;
+		text-align: center;
+		margin-top: 20px;
+	}
+}
+
 .collections-jumbotron-page-heading {
 	@include page-heading();
 	padding-left: 150px;
@@ -19,6 +28,16 @@
 		padding-right: 40px;
 		font-size: 36px;
 	}
+	@include mobile-large {
+		padding-left: 40px;
+		padding-right: 40px;
+		font-size: 36px;
+	}
+	@include tablet {
+		padding-left: 30px;
+		padding-right:30px;
+		font-size: 36px;
+	}
 }
 
 .collections-jumbotron-text-container {
@@ -29,6 +48,14 @@
 	}
 	@include mobile-landscape {
 		width: 100%;
+	}
+	@include mobile-large {
+		width: 100%;
+	}
+	@include tablet {
+		margin-top: 0px;
+		padding-top: 40px;
+		padding-bottom: 0px;
 	}
 }
 
@@ -49,6 +76,12 @@
 		margin-top: 30px;
 		font-size: 20px !important;
 	}
+	@include tablet {
+		padding-left: 40px;
+		padding-right: 40px;
+		margin-top: 30px;
+		font-size: 16px !important;
+	}
 }
 
 .item-counter {
@@ -57,6 +90,12 @@
 		margin-left: 15px;
 	}
 	@include mobile-landscape {
+		margin-left: 15px;
+	}
+	@include mobile-large {
+		margin-left: 15px;
+	}
+	@include tablet {
 		margin-left: 15px;
 	}
 }
@@ -138,6 +177,9 @@
 	@include mobile-portrait {
 		margin-left: 10px;
 	}
+	@include mobile-large {
+
+	}
 }
 
 .vertical-thumbnail-img {
@@ -145,6 +187,9 @@
 	// height: 235px;
 	@include mobile-landscape {
 		text-align: center;
+	}
+	@include mobile-large {
+		margin-bottom: 30px;
 	}
 }
 
@@ -163,6 +208,18 @@
 		margin-left: 82px;
 		margin-right: 82px;
 	}
+	@include mobile-large {
+		margin-top: -235px;
+		margin-left: auto;
+		margin-right: auto;
+		background-color: rgba(242, 241, 241, 0.5);
+		width: 286px;
+
+	}
+	@include tablet {
+		padding: 25px;
+	}
+
 }
 
 
@@ -183,10 +240,18 @@
 
 .pagination-prev {
 	float: right;
+	@include mobile-large {
+		float: left;
+		margin-left: 35vw;
+	}
 }
 
 .pagination-next {
 	float: left;
+	@include mobile-large {
+		float: right;
+		margin-right: 35vw;
+	}
 }
 
 .pagination-link {

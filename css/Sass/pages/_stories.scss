@@ -6,6 +6,19 @@
 	background-color: #fff;
 }
 
+.jumbotron-img-stories {
+	@include mobile-large {
+		width: 100%;
+		float: none;
+		text-align: center;
+	}
+	@include tablet {
+		width: 100%;
+		float: none;
+		text-align: center;
+	}
+}
+
 .stories-jumbotron-slider-text-subheading {
 	color: $blue;
 	margin-top: 40px;
@@ -47,6 +60,14 @@
 		padding-left: 30px;
 		padding-right: 30px;
 	}
+	@include mobile-large {
+		width: 100%;
+		padding: 30px;
+	}
+	@include tablet {
+		width: 100%;
+		padding: 30px;
+	}
 }
 
 .stories-jumbotron-summary {
@@ -56,8 +77,19 @@
 	@include mobile-portrait {
 		padding-bottom: 20px;
 	}
+	@include mobile-large {
+		padding-bottom: 20px;
+	}
 	@include mobile-landscape {
+		padding-bottom: 20px;
+	}
+	@include tablet {
 		padding-bottom: 20px;
 	}
 }
 
+.stories-thumbnail {
+	@include tablet {
+		width: 100%;
+	}
+}
