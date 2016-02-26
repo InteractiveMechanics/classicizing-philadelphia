@@ -1,0 +1,44 @@
+
+@mixin anchor-link($color1, $color2) {
+	color: $color1;
+	transition: $transition;
+	&:hover, &:active, &:focus, &:active:focus {
+		color: $color2;
+	}
+}
+
+@mixin page-heading() {
+	font-size: 45px;
+}
+
+
+@mixin tablet {
+	@media (min-width: #{$tablet-height}) and (max-width: #{$tablet-width - 1px}) {
+		@content;
+	}
+}
+
+@mixin mobile-large {
+	@media (min-width: #{$mobile-landscape +1px}) and (max-width: #{$tablet-height - 1px}) {
+		@content;
+	}
+}
+
+
+@mixin mobile-landscape {
+	@media (min-width: #{$mobile-portrait + 1px}) and (max-width: #{$mobile-landscape}) {
+		@content;
+	}
+}
+
+@mixin mobile-portrait {
+	@media (max-width: #{$mobile-portrait}) {
+		@content;
+	}
+}
+
+@mixin not-desktop {
+	@media (max-width: #{$tablet-width}) {
+		@content;
+	}
+}

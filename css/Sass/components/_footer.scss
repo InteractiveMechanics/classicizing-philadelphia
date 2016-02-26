@@ -1,0 +1,21 @@
+footer {
+	padding-top: 80px;
+	padding-bottom: 80px;
+	text-align: center;
+	background-color: #dedede;
+	font-family: $open-sans;
+	color: $taupe;
+	@include mobile-portrait {
+		padding-left: 30px;
+		padding-right: 30px;
+	}
+	@include mobile-landscape {
+		padding-left: 30px;
+		padding-right: 30px;
+	}
+
+}
+
+.footer-link {
+	@include anchor-link($taupe, $dark-taupe);
+}

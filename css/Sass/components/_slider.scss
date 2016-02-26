@@ -1,0 +1,180 @@
+.jumbotron {
+	padding-top: 0;
+	padding-bottom: 0;
+	overflow: auto;
+}
+
+.slick-slider {
+	@include mobile-large {
+		margin-bottom: 0px;
+	}
+	@include tablet {
+		margin-bottom: 0px;
+	}
+}
+
+
+.slick-dots {
+	position: initial;
+	float: right;
+	margin-top: -105px;
+	width: 50%;
+	@include mobile-portrait {
+		float: none;
+		width: 100%;
+		margin-top: 10px;
+	}
+	@include mobile-landscape {
+		float: none;
+		width: 100%;
+		margin-top: 10px;
+		padding-bottom: 40px;
+	}
+	@include mobile-large {
+		margin-top: -67px;
+	}
+	@include tablet {
+		margin-top: -67px;
+	}
+}
+
+
+.slick-dots li button:before {
+	font-size: 16px;
+}
+
+.slick-dots li.slick-active button:before {
+	opacity: 1.0;
+}
+
+.homepage-page .slick-dots li.slick-active button:before {
+	color: $blue;
+}
+
+.collections-page .slick-dots li.slick-active button:before {
+	color: $red;
+}
+
+
+.jumbotron-slider-img {
+	width: 50%;
+	//height: 600px;
+	float: left;
+	background: #eee;
+	@include mobile-portrait {
+		width: 100%;
+	}
+	@include mobile-landscape {
+		width: 100%;
+	}	
+}
+
+.jumbotron-slider-text {
+	width: 50%;
+	float: left;
+	text-align: center;
+	text-transform: uppercase;
+	padding-left: 160px;
+	padding-right: 160px;
+	@include mobile-portrait {
+		width: 100%;
+		padding-left: 40px;
+		padding-right: 40px;
+	}
+	@include mobile-landscape {
+		width: 100%;
+		padding-left: 40px;
+		padding-right: 40px;
+	}
+	@include mobile-large {
+		padding: 50px 25px 0px 25px;
+	}
+	@include tablet {
+		padding: 0px 50px;
+	}
+}
+
+.homepage-page .jumbotron-slider-text {
+	color: $blue;
+	@include mobile-portrait {
+		padding-bottom: 10px;
+	}
+	@include mobile-landscape {
+		padding-bottom: 10px;
+	}
+	@include mobile-large {
+		padding-bottom: 10px;
+	}
+}
+
+.collections-page .jumbotron-slider-text {
+	color: $red;
+	@include mobile-portrait {
+		padding-bottom: 10px;
+	}
+	@include mobile-landscape {
+		padding-bottom: 10px;
+	}
+	@include mobile-large {
+		padding-bottom: 10px;
+	}
+}
+
+.jumbotron-slider-text-subheading {
+	padding-top: 80px;
+	font-weight: 300;
+	font-family: $open-sans;
+	letter-spacing: 1px;
+	@include mobile-portrait {
+		padding-top: 0px;
+	}
+	@include mobile-landscape {
+		padding-top: 0px;
+	}
+	@include mobile-large {
+		padding-top: 0px;
+	}
+}
+
+.jumbotron-slider-text-featured-collection {
+	@include page-heading();
+	padding-bottom: 100px;
+	@include mobile-portrait {
+		padding-bottom: 60px;
+		font-size: 38px;
+	}
+	@include mobile-landscape {
+		padding-bottom: 20px;
+		font-size: 38px;
+	}
+	@include mobile-large {
+		padding-bottom: 30px;
+		font-size: 38px;
+	}
+	@include tablet {
+		padding-bottom: 30px;
+		font-size: 36px;
+	}
+}
+
+.homepage-page .jumbotron-slider-text-link  {
+	@include anchor-link($blue, $dark-blue);
+	@include mobile-portrait {
+		margin-top: 20px;
+	}
+	@include mobile-landscape {
+		margin-top: 20px;
+	}
+	@incude mobile-large {
+		margin-top: 20px;
+	}
+}
+
+.collections-page .jumbotron-slider-text-link  {
+	@include anchor-link($red, $dark-red);
+	
+}
+
+.stories-page .jumbotron-slider-text-link {
+	@include anchor-link($blue, $dark-blue);
+}

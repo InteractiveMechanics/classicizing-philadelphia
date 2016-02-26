@@ -1,0 +1,46 @@
+a {
+	font-weight: 700;
+}
+
+a.disabled {
+	color: $taupe;
+	opacity: 0.5;
+	pointer-events: none;
+}
+
+:focus {
+	outline-width: 0px;
+}
+
+img, video {
+	max-width: 100%;
+}
+
+.paragraph-link {
+	@include anchor-link($black, $dark-black);
+}
+
+.btn {
+	&:focus {
+		outline-color: transparent;
+		outline: none;
+	}
+}
+
+.bootstrap-select.btn-group .dropdown-toggle .caret {
+	 width: 10px;
+  	height: 10px;
+  	border: none;
+}
+
+.bootstrap-select.btn-group .dropdown-toggle .caret:before {
+	content: url(../img/icon-carat.svg);
+	position: absolute;
+	top: -10px;
+	right: -10px;
+}
+
+.italics {
+	font-style: italic;
+}
+

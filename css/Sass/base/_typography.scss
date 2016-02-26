@@ -1,0 +1,10 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700%7CPT+Sans+Narrow:400,700);
+
+
+h1, h2, h3, h4, h5, h6, label, input, textarea {
+	font-family: $pt-sans;
+}
+
+p, li {
+	font-family: $open-sans;
+}

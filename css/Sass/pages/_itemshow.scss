@@ -1,0 +1,115 @@
+.single-item-page {
+	overflow: auto;
+}
+
+.item-image {
+	padding-left: 0;
+	padding-right: 0;
+	@include mobile-large {
+		text-align: center;
+		width: 100%;
+	}
+	@include tablet {
+		text-align: center;
+		width: 100%;
+	}
+}
+
+.item-description-container {
+	padding: 75px 75px 60px 75px;
+	@include mobile-portrait {
+		padding: 50px 30px;
+	}
+	@include mobile-landscape {
+		padding: 50px 30px;
+	}
+	@include mobile-large {
+		width: 100%;
+	}
+	@include tablet {
+		width: 100%;
+	}
+}
+
+.item-name {
+	display: inline-block;
+	color: $blue;
+	text-transform: uppercase;
+	font-weight: 600;
+	letter-spacing: 1.75px;
+	font-size: 42px;
+	margin-bottom: 30px;
+	@include mobile-portrait {
+		font-size: 30px;
+	}
+	@include mobile-landscape {
+		font-size: 30px;
+	}
+}
+
+.item-year {
+	display: inline-block;
+	color: $taupe;
+	margin-left: 10px;
+	@include mobile-portrait {
+		font-size: 20px;
+	}
+	@include mobile-landscape {
+		font-size: 20px;
+	}
+}
+
+.item-description, .item-source-description, .item-rights-description, .item-rights-owner, .item-coverage-made-in, .item-coverage-owner, .item-accession-number, .item-format-description {
+	font-size: 20px;
+	margin-top: 30px;
+	line-height: 1.6;
+	margin-top: 0;
+	@include mobile-portrait {
+		font-size: 16px;
+	}
+	@include mobile-landscape {
+		font-size: 16px;
+	}
+}
+
+.item-source-heading, .item-rights-heading, .item-coverage-heading, .item-format-heading {
+	color: $blue;
+	font-size: 28px;
+	margin-bottom: 0;
+	margin-top: 30px;
+	@include mobile-portrait {
+		font-size: 24px;
+		margin-bottom: 5px;
+	}
+	@include mobile-landscape {
+		font-size: 24px;
+		margin-bottom: 5px;
+	}
+}
+
+.item-tombstone-card {
+	background-color: #f2f2f2;
+	margin-top: 40px;
+	margin-bottom: 80px;
+	@include mobile-portrait {
+		margin-bottom: 40px;
+	}
+	@include mobile-landscape {
+		margin-bottom: 40px;
+	}
+}
+
+.item-tombstone-card-description {
+	font-size: 20px;
+	line-height: 2;
+	padding: 40px;
+	@include mobile-portrait {
+		padding: 15px;
+		font-size: 16px;
+	}
+	@include mobile-landscape {
+		padding: 15px;
+		font-size: 16px;
+	}
+
+}
