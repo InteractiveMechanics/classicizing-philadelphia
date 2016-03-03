@@ -25,6 +25,7 @@
         queue_css_file('lib/bootstrap.min');
         queue_css_file('lib/slick');
         queue_css_file('lib/slick-theme');
+        queue_css_url('//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.9.3/css/bootstrap-select.min.css');
         queue_css_file('main');
         echo head_css();
     ?>
@@ -35,6 +36,7 @@
 	    queue_js_url('//ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js');
         queue_js_file('lib/bootstrap.min');
         queue_js_file('lib/slick.min');
+        queue_js_url('//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.9.3/js/bootstrap-select.min.js');
         queue_js_file('main');
         echo head_js();
     ?>
