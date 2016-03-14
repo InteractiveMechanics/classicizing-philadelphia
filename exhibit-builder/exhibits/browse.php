@@ -21,9 +21,10 @@ echo head(array('title' => $title, 'bodyclass' => 'exhibits browse'));
 					</h2>
 					<p class="stories-jumbotron-summary">
 						<?php $featuredExhibitDescription = metadata($exhibit, 'description'); ?>
-						<?php echo strip_formatting($featuredExhibitDescription); ?>
+						<?php echo ($featuredExhibitDescription); ?>
 					</p>
-					<?php echo link_to_exhibit('<h4>View the Story</h4>', array('class' => 'jumbotron-slider-text-link')); ?>													</section>
+					<?php echo link_to_exhibit('<h4>View the Story</h4>', array('class' => 'jumbotron-slider-text-link')); ?>	
+					</section>
 				<?php endif; ?>
 				<?php endforeach; ?>
 			</div>
