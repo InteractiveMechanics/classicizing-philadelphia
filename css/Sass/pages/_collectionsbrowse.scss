@@ -1,0 +1,14 @@
+.collections-page-heading {
+	@include page-heading();
+	padding-top: 100px;
+	text-align: center;
+	text-transform: uppercase;
+	color: $blue;
+	justify-content: center;
+	@include mobile-portrait {
+		font-size: 36px;
+	}
+	@include mobile-landscape {
+		font-size: 36px;
+	}
+}

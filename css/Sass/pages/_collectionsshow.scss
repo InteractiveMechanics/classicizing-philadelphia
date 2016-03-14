@@ -43,6 +43,7 @@
 .collections-jumbotron-text-container {
 	width: 50%;
 	float: left;
+	padding-bottom: 0;
 	@include mobile-portrait {
 		width: 100%;
 	}

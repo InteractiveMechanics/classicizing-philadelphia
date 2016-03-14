@@ -27,14 +27,14 @@
 				</div>
 				<?php endforeach; ?>
 				<?php endif; ?>
-			</div>
+		../css/Sass/components/_thumbnail.scss	</div>
 -->
  
 
 	<div class="container">
 			<div class="row">
 				<div class="col-md-8 col-sm-10 col-md-offset-2 col-sm-offset-1"> 
-					<h1 class="about-page-heading"><?php echo 'Browse all Collections'; ?></h1>
+					<h1 class="collections-page-heading"><?php echo 'Browse all Collections'; ?></h1>
 				</div>
 			</div>
 			
@@ -43,9 +43,9 @@
 		            <?php foreach (loop('collections') as $collection): ?>
 		            	<?php if($collection->public == true): ?>
 		            	<div class="thumbnail-50">
-			                <div class="thumbnail-img">
+			                <div class="thumbnail-img-container">
 		                            <?php if ($collectionImage = record_image('collection', 'square_thumbnail')): ?>
-		                                <?php echo link_to_collection($collectionImage, array('class' => 'image')); ?>
+		                                <?php echo link_to_collection($collectionImage, array('class' => 'thumbnail-img')); ?>
 		                            <?php endif; ?>
 		                    </div>
 		                     <div class="thumbnail-caption">

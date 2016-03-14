@@ -12,8 +12,13 @@ a.disabled {
 	outline-width: 0px;
 }
 
-img, video {
+video {
 	max-width: 100%;
+}
+
+img {
+	height: 100%;
+	width: 100%;
 }
 
 .paragraph-link {
