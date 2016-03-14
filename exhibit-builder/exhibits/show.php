@@ -8,7 +8,7 @@ echo head(array(
 	<div class="container">
 			<div class="row">
 				<div class="col-md-8 col-sm-10 col-md-offset-2 col-sm-offset-1">
-					<h1><span class="exhibit-page about-page-heading"><?php echo metadata('exhibit_page', 'title'); ?></h1>
+					<h1 class="exhibit-page about-page-heading"><?php echo metadata('exhibit_page', 'title'); ?></h1>
 
 <div id="exhibit-blocks">
 <?php exhibit_builder_render_exhibit_page(); ?>

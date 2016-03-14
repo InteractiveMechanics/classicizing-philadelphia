@@ -1,0 +1,20 @@
+.exhibit-description {
+	font-size: 20px;
+	line-height: 1.6;
+	@include mobile-portrait {
+		margin-left: 10px;
+		margin-right: 10px;
+		font-size: 16px;	
+		padding-top: 30px;
+	}
+	@include mobile-landscape {
+		margin-left: 10px;
+		margin-right: 10px;
+		padding-top: 30px;
+	}	
+}
+
+#exhibit-pages ul {
+	padding-left: 0;
+	-webkit-padding-start: 0;
+}
