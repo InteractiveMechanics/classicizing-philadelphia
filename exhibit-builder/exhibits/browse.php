@@ -34,16 +34,12 @@ echo head(array('title' => $title, 'bodyclass' => 'exhibits browse'));
 			<?php foreach (loop('exhibit') as $exhibit): ?>
 			<div class="col-sm-6 stories-thumbnail">
 				<div class="thumbnail">
-					<div class="thumbnail-img-container">
 					<?php $exhibitImage = sckls_exhibit_builder_get_first_image_html($exhibit); ?>
-					<?php echo '<img src="'. $exhibitImage . '">'; ?>
-					</div>
+					<?php echo '<div class="thumbnail-img-container" style="background-image: url(' . $exhibitImage . ');"></div>'; ?>					
 					<div class="thumbnail-caption">
 						<?php $featuredExhibitTitle = metadata($exhibit, 'title'); ?>
-						<?php echo link_to_exhibit($featuredExhibitTitle); ?>
-					</div>
-						
-					
+						<h2 class="thumbnail-caption-featured-collection"><?php echo link_to_exhibit($featuredExhibitTitle); ?></h2>
+					</div>	
 				</div>
 			</div>
 			<?php endforeach; ?>
