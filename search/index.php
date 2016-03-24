@@ -1,12 +1,40 @@
 <?php
-    $pageTitle = __('Search Omeka ') . __('(%s total)', $total_results);
+    $pageTitle = __('Search ') . __('(%s total)', $total_results);
     echo head(array('title' => $pageTitle, 'bodyclass' => 'search'));
     $searchRecordTypes = get_search_record_types();
 ?>
-    <h1><?php echo $pageTitle; ?></h1>
-    <h5><?php echo search_filters(); ?></h5>
+
+	<main class="search-page">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8 col-sm-10 col-md-offset-2 col-sm-offset-1">
+					<h1 class="search-page-heading">Search</h1>
+						<h4 class="search-results-number"><?php echo ($total_results); ?> results</h4>
+							
+							<form class="search-form">
+								 <div class="form-group input-group">
+								 	<?php echo $this->formText('query', $filters['query'], array('class'=>'form-control search-form-inputs', 'placeholder'=>'Search term')); ?>
+								 	<span class="input-group-btn">
+								 		<button type="submit" class="btn btn-default search-form-submit-btn">Submit</button>
+								 	</span>
+	    						</div>
+							</form>
+						
+							<form class="search-form">
+								<div class="input-group">
+									<input type="text" id="searchFormInput" class="form-control search-form-inputs" placeholder="Search term">
+									<span class="input-group-btn">
+	        							<button class="btn btn-default search-form-submit-btn" type="submit">Submit</button>
+									</span>
+								</div>
+							</form>
+							
+							
+
+					
+    <!--<h5><?php echo search_filters(); ?></h5>-->
     <?php if ($total_results): ?>
-        <table id="search-results">
+        <table id="search-results" class="table search-results-table">
             <thead>
                 <tr>
                     <th><?php echo __('Record Type');?></th>
@@ -20,13 +48,10 @@
                 <?php $recordType = $searchText['record_type']; ?>
                 <?php set_current_record($recordType, $record); ?>
                 <tr class="<?php echo strtolower($filter->filter($recordType)); ?>">
-                    <td>
+                    <td class="search-results-table-row">
                         <?php echo $searchRecordTypes[$recordType]; ?>
                     </td>
-                    <td>
-                        <?php if ($recordImage = record_image($recordType, 'square_thumbnail')): ?>
-                            <?php echo link_to($record, 'show', $recordImage, array('class' => 'image')); ?>
-                        <?php endif; ?>
+                    <td class="search-results-table-row">
                         <a href="<?php echo record_url($record, 'show'); ?>"><?php echo $searchText['title'] ? $searchText['title'] : '[Unknown]'; ?></a>
                     </td>
                 </tr>
