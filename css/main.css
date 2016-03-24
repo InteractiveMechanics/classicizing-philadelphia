@@ -378,8 +378,7 @@ footer {
 
 .jumbotron {
   padding-top: 0;
-  padding-bottom: 0;
-  overflow: auto; }
+  padding-bottom: 0; }
 
 @media (min-width: 537px) and (max-width: 767px) {
   .slick-slider {
@@ -582,7 +581,8 @@ footer {
   width: 50%;
   height: 100%;
   float: left;
-  background: #777777; }
+  background: #777777;
+  background-size: cover; }
   @media (max-width: 320px) {
     .thumbnail-img-container {
       width: 100%; } }
@@ -643,8 +643,7 @@ footer {
   height: 580px;
   margin-right: 1%;
   float: left;
-  background: #f1f2f2;
-  padding: 60px; }
+  padding: 100px; }
   @media (max-width: 320px) {
     .homepage-about {
       width: 100%;
@@ -668,7 +667,11 @@ footer {
 
 .homepage-about-heading {
   color: #2e7dc1;
-  font-family: "PT Sans Narrow", sans-serif; }
+  font-family: "PT Sans Narrow", sans-serif;
+  font-size: 45px;
+  margin-bottom: 40px;
+  text-align: center;
+  text-transform: uppercase; }
   @media (max-width: 320px) {
     .homepage-about-heading {
       font-size: 24px; } }
@@ -684,6 +687,8 @@ footer {
 
 .homepage-thumbnails-container {
   width: 48%;
+  margin-left: 1%;
+  margin-right: 1%;
   padding-top: 0;
   padding-bottom: 0;
   margin-left: 1%;
@@ -724,6 +729,9 @@ footer {
     float: none;
     text-align: center;
     margin-top: 20px; } }
+
+.jumbotron-collections-show {
+  overflow: auto; }
 
 .collections-jumbotron-page-heading {
   font-size: 45px;
@@ -1355,7 +1363,8 @@ footer {
   background-color: #dedede; }
 
 .stories-jumbotron {
-  background-color: #fff; }
+  background-color: #fff;
+  overflow: auto; }
 
 @media (min-width: 537px) and (max-width: 767px) {
   .jumbotron-img-stories {
@@ -1370,7 +1379,7 @@ footer {
 
 .stories-jumbotron-slider-text-subheading {
   color: #2e7dc1;
-  margin-top: 40px; }
+  margin-top: 60px; }
   @media (max-width: 320px) {
     .stories-jumbotron-slider-text-subheading {
       margin-top: 0px; } }
@@ -1381,7 +1390,7 @@ footer {
 .jumbotron-slider-text-featured-story {
   color: #2e7dc1;
   letter-spacing: 1.5px;
-  margin-bottom: 40px;
+  margin-bottom: 15px;
   font-size: 45px; }
   @media (max-width: 320px) {
     .jumbotron-slider-text-featured-story {
@@ -1395,8 +1404,7 @@ footer {
   float: left;
   text-align: center;
   text-transform: uppercase;
-  padding-left: 100px;
-  padding-right: 100px; }
+  padding: 0px 75px; }
   @media (max-width: 320px) {
     .stories-jumbotron-slider-text {
       width: 100%;
@@ -1419,7 +1427,7 @@ footer {
 .stories-jumbotron-summary {
   text-transform: initial;
   text-align: initial;
-  padding-bottom: 80px; }
+  padding-bottom: 15px; }
   @media (max-width: 320px) {
     .stories-jumbotron-summary {
       padding-bottom: 20px; } }
@@ -1453,8 +1461,32 @@ footer {
       padding-top: 30px; } }
 
 #exhibit-pages ul {
-  margin-left: 0;
   padding-left: 0;
   -webkit-padding-start: 0; }
+
+.exhibit-items img {
+  padding: 0px 20px 20px 0px; }
+
+.exhibit-block {
+  margin-top: 40px;
+  font-size: 20px; }
+
+#exhibit-nav-prev, #exhibit-nav-next {
+  font-family: "PT Sans Narrow", sans-serif;
+  font-size: 18px;
+  margin-top: 20px;
+  text-transform: uppercase; }
+
+#exhibit-nav-up {
+  display: none; }
+
+.exhibit-section-nav {
+  clear: both;
+  font-size: 18px;
+  margin-top: 100px; }
+
+.exhibit-title {
+  font-size: 24px;
+  text-transform: uppercase; }
 
 /*# sourceMappingURL=main.css.map */

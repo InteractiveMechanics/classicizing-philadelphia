@@ -10,8 +10,8 @@
 	height: 580px;
 	margin-right: 1%;
 	float: left;
-	background: #f1f2f2;
-	padding: 60px;
+	//background: #f1f2f2;
+	padding: 100px;
 	@include mobile-portrait {
 		width: 100%;
 		height: auto;
@@ -38,6 +38,10 @@
 .homepage-about-heading {
 	color: $blue;
 	font-family: $pt-sans;
+	font-size: 45px;
+	margin-bottom: 40px;
+	text-align: center;
+	text-transform: uppercase;
 	@include mobile-portrait {
 		font-size: 24px;
 	}
@@ -55,6 +59,8 @@
 
 .homepage-thumbnails-container {
 	width: 48%;
+	margin-left: 1%;
+	margin-right: 1%;
 	padding-top: 0;
 	padding-bottom: 0;
 	margin-left: 1%;

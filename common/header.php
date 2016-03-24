@@ -58,7 +58,7 @@
 
         <nav class="navbar navbar-default" role="navigation">
            <div class="clearfix">
-	           <a class="navbar-brand" href="">
+	           <a class="navbar-brand" href="<?php echo url('/'); ?>">
 		           <h1>
 		    		<?php $logo = img('logo.svg'); ?>
 		    		<?php $logo_text = img('logo-text.svg'); ?>

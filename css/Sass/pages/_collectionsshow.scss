@@ -11,6 +11,10 @@
 	}
 }
 
+.jumbotron-collections-show {
+	overflow: auto;
+}
+
 .collections-jumbotron-page-heading {
 	@include page-heading();
 	padding-left: 150px;

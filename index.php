@@ -1,33 +1,39 @@
 <?php echo head(array('bodyid'=>'home')); ?>
 
 <?php echo get_theme_option('Homepage About'); ?>
-<div class="row">
-    <div class="col-sm-4">
-        <?php if (get_theme_option('Display Featured Item') !== '0'): ?>
-            <h2><?php echo __('Featured Item'); ?></h2>
-            <?php echo random_featured_items(1); ?>
-        <?php endif; ?>
-    </div>
-    <div class="col-sm-4">
-        <?php if (get_theme_option('Display Featured Collection') !== '0'): ?>
-            <h2><?php echo __('Featured Collection'); ?></h2>
-            <?php echo random_featured_collection(); ?>
-        <?php endif; ?>
-    </div>
-    <div class="col-sm-4">
-        <?php if ((get_theme_option('Display Featured Exhibit') !== '0') && plugin_is_active('ExhibitBuilder') && function_exists('exhibit_builder_display_random_featured_exhibit')): ?>
-            <?php echo exhibit_builder_display_random_featured_exhibit(); ?>
-        <?php endif; ?>
-    </div>
-</div>    
-<div class="row">
-    <div class="col-sm-12">
-        <h2><?php echo __('Recently Added Items'); ?></h2>
-        <?php echo recent_items(3); ?>
-        <p class="view-items-link"><a href="<?php echo html_escape(url('items')); ?>"><?php echo __('View All Items'); ?></a></p>
-    </div>
+<main class="homepage-page">
+	<div class="jumbotron">
+		<div class="jumbotron-slider">
+			<div class="placeholder-1">
+				<div class="jumbotron-slider-img">
+					<?php $homepage_img = img('homepage-bg.jpg'); ?>
+					<img src="<?php echo $homepage_img; ?>" alt="homepage-image"/>
+				</div>
+				<section class="homepage-about">
+					<h3 class="homepage-about-heading">About Classicizing Philadelphia</h3>
+					<p class="homepage-about-content">America's engagement with Greece and Rome constitutes a continuous thread in the conversation that has created our culture and institutions. Classicizing Philadelphia, a digital humanities project in public history at Bryn Mawr College, seeks to document, study, and continue this important conversation in its many forms throughout the history of the city of Philadelphia. <a href="" class="paragraph-link">About this project &raquo;</a></p>
+				</section>
+			</div>
+		</div>
+	</div>
+	
+	<!-- 2 items -->
+	<section class="homepage-thumbnails-container">
+		<?php echo classphila_random_featured_item(); ?>
+	</section>
+	
+	<!-- 1 collection -->
+	<section class="homepage-thumbnails-container">
+		<?php echo classphila_random_featured_collection(); ?>
+	</section>
+	
+	<!-- 1 story  -->
+	<!-- 1 collection -->
+	<section class="homepage-thumbnails-container">
+		<?php echo classphila_exhibit_builder_display_random_featured_exhibit(); ?>
+	</section>
     
-    <?php fire_plugin_hook('public_home', array('view' => $this)); ?>
-</div>
+    
+ </div>    
 
 <?php echo foot(); ?>

@@ -18,3 +18,35 @@
 	padding-left: 0;
 	-webkit-padding-start: 0;
 }
+
+.exhibit-items img {
+	padding: 0px 20px 20px 0px;
+}
+
+.exhibit-block {
+	margin-top: 40px;
+	font-size: 20px;
+}
+
+#exhibit-nav-prev, #exhibit-nav-next {
+	font-family: $pt-sans;
+	font-size: 18px;
+	margin-top: 20px;
+	text-transform: uppercase;
+}
+
+#exhibit-nav-up {
+	display: none;
+}
+
+
+.exhibit-section-nav {
+	clear: both;
+	font-size: 18px;
+	margin-top: 100px;
+}
+
+.exhibit-title {
+	font-size: 24px;
+	text-transform: uppercase;
+}

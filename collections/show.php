@@ -1,12 +1,10 @@
-
-
 <?php
     $collectionTitle = strip_formatting(metadata('collection', array('Dublin Core', 'Title')));
     echo head(array('title'=> $collectionTitle, 'bodyclass' => 'collections show'));
 ?>
 
 <main class="collectionsshow-page">
-		<div class="jumbotron">
+		<div class="jumbotron jumbotron-collections-show">
 			<div class="placeholder-1">
 				<div class="jumbotron-slider-img jumbotron-slider-img-collectionsshow">
 					<?php if ($collectionImage = record_image('collection', 'fullsize')): ?>
@@ -19,37 +17,72 @@
 				</section>
 			</div>
 		</div>
-		   
-    <section class="container filter-section">
+        <?php 
+            if (isset($_GET['tag']) || isset($_GET['neighborhood'])) {
+                if (isset($_GET['tag'])){ $current_tags = $_GET['tag']; }
+                if (isset($_GET['neighborhood'])){ $current_neighborhood = $_GET['neighborhood']; }
+
+                $tags = '';
+                if (isset($current_tags)){ $tags .= $current_tags; }
+                if (isset($current_neighborhood) && isset($current_tags)){ $tags .= ','; }
+                if (isset($current_neighborhood)){ $tags .= $current_neighborhood; }
+
+                $item_records = get_records('Item', array(
+                    'collection' => $collection,
+                    'tags' => rawurldecode($tags)
+                ), 0);
+            } else {
+                $item_records = get_records('Item', array(
+                    'collection' => $collection
+                ), 0);
+            }
+            set_loop_records('items', $item_records);
+        ?>
+        <section class="container filter-section">
 			<div class="row">
 				<h2 class="item-counter">
-					 <?php $count = metadata($collection, 'total_items'); ?>
-					<?php echo("$count"); ?> Items</h2>
-					<?php echo get_recent_tags(3); ?>
-			
+					<?php echo count($item_records); ?> Items</h2>
+					<?php 
+                        $tag_records = get_records("Tag");
+						$neighborhoods = [];
+						$tags = [];
+						foreach($tag_records as $tr) {
+							if(substr($tr['name'], 0, 12) == "Neighborhood") {
+								array_push($neighborhoods, $tr["name"]);
+							} else {
+								array_push($tags, $tr["name"]);
+							}
+                        }
+                    ?>
 					<?php echo tag_string('collection', 'collections'); ?>
 					<div class="filters-container">
-					<select class="form-control single-filter selectpicker" data-width="165px">
-						<option selected>All Tags</option>
+					<select class="form-control single-filter selectpicker" title="All Tags" onchange="location = this.options[this.selectedIndex].value;" data-size="5" data-width="165px">
 						<?php foreach($tags as $tag): ?>
-								<option><?php echo tag_strings($tag); ?></option>
+                            <option 
+                                <?php if(isset($current_tags)){ if($current_tags == $tag){ echo "selected"; }} ?>
+                                value="?tag=<?php echo rawurlencode($tag); ?><?php if (isset($current_neighborhood)): ?>&neighborhood=<?php echo $current_neighborhood; endif; ?>">
+                                    <?php echo $tag; ?>
+                            </option>
 						<?php endforeach; ?>	
 					</select>
-					<select class="form-control single-filter selectpicker" data-width="195px">
-						<option selected>All Neighborhoods</option>
-						<option>Neighborhood 1</option>
-						<option>Neighborhood 2</option>
-						<option>Neighborhood 3</option>
-						<option>Neighborhood 4</option>
-						<option>Neighborhood 5</option>	
+					<select class="form-control single-filter selectpicker" title="All Neighborhoods" onchange="location = this.options[this.selectedIndex].value;" data-size="5" data-width="195px">
+						<?php foreach($neighborhoods as $neighborhood):
+							$name = substr($neighborhood, 14); ?>
+                            <option 
+                                <?php if(isset($current_neighborhood)){ if($current_neighborhood == $neighborhood){ echo "selected"; }} ?>
+                                value="?neighborhood=<? echo rawurlencode($neighborhood); ?><?php if (isset($current_tags)): ?>&tag=<?php echo $current_tags; endif; ?>">
+                                    <?php echo $name; ?>
+                            </option>
+						<?php endforeach; ?>
 					</select>
-				</div>		
+                    <?php echo link_to_collection('Reset Filters', array('class' => 'btn btn-default')) ?>
+				</div>
 			</div>
 		</section>
     
     
 		<section class="vertical-thumbnail-container">
-        <?php if (metadata('collection', 'total_items') > 0): ?>
+        <?php if (count($item_records) > 0): ?>
             <?php foreach (loop('items') as $item): ?>
             <div class="col-sm-3 vertical-thumbnail">
                 <?php if (metadata('item', 'has thumbnail')): ?>
@@ -68,7 +101,7 @@
         <?php else: ?>
             <p><?php echo __("There are currently no items within this collection."); ?></p>
         <?php endif; ?>
-    </div><!-- end collection-items -->
+        </div><!-- end collection-items -->
 
 <?php fire_plugin_hook('public_collections_show', array('view' => $this, 'collection' => $collection)); ?>
 <?php echo foot(); ?>

@@ -1,10 +1,12 @@
 $(document).ready(function(){
 
+
   $('.jumbotron-slider').slick({
   	fade: true,
   	arrows: false,
-    dots: true
+    dots: false
   });
+
 
   $('.search-input-container').hide();
 

@@ -30,10 +30,10 @@ echo head(array(
     </div>
 </div>
 
-<nav id="exhibit-pages">
-    <h4><?php echo exhibit_builder_link_to_exhibit($exhibit); ?></h4>
+<div id="exhibit-pages" class="exhibit-section-nav">
+    <h4 class="exhibit-title"><?php echo exhibit_builder_link_to_exhibit($exhibit); ?></h4>
     <?php echo exhibit_builder_page_tree($exhibit, $exhibit_page); ?>
-</nav>
+</div>
 
 </main>
 <?php echo foot(); ?>
