@@ -11,23 +11,12 @@
 					<h1 class="search-page-heading">Search</h1>
 						<h4 class="search-results-number"><?php echo ($total_results); ?> results</h4>
 							
-							<form class="search-form">
-								 <div class="form-group input-group">
-								 	<?php echo $this->formText('query', $filters['query'], array('class'=>'form-control search-form-inputs', 'placeholder'=>'Search term')); ?>
-								 	<span class="input-group-btn">
-								 		<button type="submit" class="btn btn-default search-form-submit-btn">Submit</button>
-								 	</span>
-	    						</div>
-							</form>
+							<form role="search" class="search-form" action="<?php echo public_url(''); ?>search">
+								<?php echo search_form(array('show_advanced' => false, 'show_searchpage' => true)); ?>
+                   			</form>
+							
 						
-							<form class="search-form">
-								<div class="input-group">
-									<input type="text" id="searchFormInput" class="form-control search-form-inputs" placeholder="Search term">
-									<span class="input-group-btn">
-	        							<button class="btn btn-default search-form-submit-btn" type="submit">Submit</button>
-									</span>
-								</div>
-							</form>
+							
 							
 							
 

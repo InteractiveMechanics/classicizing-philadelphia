@@ -12,10 +12,14 @@ $(document).ready(function(){
 
  
   $('.search-btn').click(function(event) {
-  		event.preventDefault();
-  		$('.search-input-container').show().addClass('search-input-show');
-  		$(this).addClass('search-btn-move');
-  		$('.navbar-text').hide();
+  		if ($(this).hasClass('search-btn-move')) {
+	  		return true;
+  		} else {
+	  		$('.search-input-container').show().addClass('search-input-show');
+	  		$(this).addClass('search-btn-move');
+	  		$('.navbar-text').hide();
+	  		return false;
+  		}
   	});
 
   $('.reset-btn').click(function(event) {
