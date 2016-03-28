@@ -75,7 +75,7 @@
                             </option>
 						<?php endforeach; ?>
 					</select>
-                    <?php echo link_to_collection('Reset Filters', array('class' => 'btn btn-default')) ?>
+                    <?php echo link_to_collection('Reset Filters', array('class' => 'btn btn-default reset-filter-btn')) ?>
 				</div>
 			</div>
 		</section>
@@ -84,7 +84,7 @@
 		<section class="vertical-thumbnail-container">
         <?php if (count($item_records) > 0): ?>
             <?php foreach (loop('items') as $item): ?>
-            <div class="col-sm-3 vertical-thumbnail">
+            <div class="col-sm-3 vertical-thumbnail browse-items">
                 <?php if (metadata('item', 'has thumbnail')): ?>
                 <div class="vertical-thumbnail-img">
                     <?php echo link_to_item(item_image('square_thumbnail', array())); ?>
@@ -93,8 +93,10 @@
 	                <?php $itemDate = strip_formatting(metadata('item', array('Dublin Core', 'Date'))); ?>
 	                <h5 class="vertical-thumbnail-caption-year"><?php echo ($itemDate); ?></h5>
 	                <?php $itemTitle = strip_formatting(metadata('item', array('Dublin Core', 'Title'))); ?>
-	                <h4 class="vertical-thumbnail-caption-title"><?php echo ($itemTitle); ?></h4>    
+	                <h4 class="vertical-thumbnail-caption-title"><?php echo ($itemTitle); ?></h4>  
                 </div>
+                 <?php fire_plugin_hook('public_items_browse_each', array('view' => $this, 'item' =>$item)); ?>   
+                <?php echo pagination_links(); ?>
                 <?php endif; ?>
              </div>
             <?php endforeach; ?>
@@ -102,6 +104,8 @@
             <p><?php echo __("There are currently no items within this collection."); ?></p>
         <?php endif; ?>
         </div><!-- end collection-items -->
+        
+        
         
 
 <?php fire_plugin_hook('public_collections_show', array('view' => $this, 'collection' => $collection)); ?>

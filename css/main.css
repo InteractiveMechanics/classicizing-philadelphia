@@ -873,6 +873,22 @@ footer {
   border-right: 1px solid rgba(0, 0, 0, 0.15);
   border-bottom: 3px solid #2e7dc1; }
 
+.reset-filter-btn {
+  background-color: transparent;
+  border: 3px solid #2e7dc1;
+  color: #2e7dc1;
+  font-family: "PT Sans Narrow", sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  height: 50px;
+  margin-left: 20px;
+  margin-top: 14px;
+  transition: all 0.25s ease-in-out; }
+  .reset-filter-btn:hover, .reset-filter-btn:active, .reset-filter-btn:focus {
+    background-color: #2e7dc1;
+    border-color: #2e7dc1;
+    color: #f1f2f2; }
+
 .vertical-thumbnail-container {
   padding-top: 0;
   overflow: auto; }
