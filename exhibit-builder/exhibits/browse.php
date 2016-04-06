@@ -30,7 +30,7 @@ echo head(array('title' => $title, 'bodyclass' => 'exhibits browse'));
 			</div>
 		</div> <!-- /jumbotron -->
 		
-		<div class="container">
+		<div>
 			<?php foreach (loop('exhibit') as $exhibit): ?>
 			<div class="col-sm-6 stories-thumbnail">
 				<div class="thumbnail">

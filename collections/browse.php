@@ -4,41 +4,15 @@
 ?>
 
 <main class="collections-page">
-<!--
-<div class="jumbotron">
-			<div class="jumbotron-slider">
-				<?php $featuredCollection = get_random_featured_collection(); ?>
-				<?php if($featuredCollection): ?>
-				<?php foreach(loop('collections') as $featuredCollection): ?>
-				<div class="placeholder-1">
-					<div class="jumbotron-slider-img">
-						 <?php if ($collectionImage = record_image('collection', 'fullsize')): ?>
-                                <?php echo link_to_collection($collectionImage, array('class' => 'image')); ?>
-                            <?php endif; ?>
-					</div>
-					<section class="jumbotron-slider-text">
-						<h4 class="jumbotron-slider-text-subheading">Featured Collection</h4>
-						<?php $myTitle = metadata($featuredCollection, array('Dublin Core', 'Title')); ?>
-						<?php if ($myTitle):  ?>
-							<h2 class="jumbotron-slider-text-featured-collection"><?php echo $myTitle; ?></h2>
-						<?php echo link_to_collection('<h4>View Items in this collection</h4>', array('class' => 'jumbotron-slider-text-link')); ?>
-						<?php endif; ?>
-					</section>
-				</div>
-				<?php endforeach; ?>
-				<?php endif; ?>
-		../css/Sass/components/_thumbnail.scss	</div>
--->
  
 
-	<div class="container">
 			<div class="row">
 				<div class="col-md-8 col-sm-10 col-md-offset-2 col-sm-offset-1"> 
 					<h1 class="collections-page-heading"><?php echo 'Browse all Collections'; ?></h1>
 				</div>
 			</div>
 			
-			<section class="container">
+			<section>
 		        <?php if ($total_results > 0): ?>
 		            <?php foreach (loop('collections') as $collection): ?>
 		            	<?php if($collection->public == true): ?>
@@ -56,7 +30,6 @@
 									<h2 class="thumbnail-caption-featured-collection"><?php echo $myTitle; ?></h2>
 								<?php echo link_to_collection('<h4>View Items in this collection</h4>', array('class' => 'thumbnail-link')); ?>
 								<?php endif; ?>
-			
 		                     </div>
 		                </div>
                                               
@@ -69,7 +42,7 @@
     		</section>
     <?php echo pagination_links(); ?> 
  
-
+		
 </main>       
 
 <?php fire_plugin_hook('public_collections_browse', array('collections'=> $collections, 'view' => $this)); ?>
