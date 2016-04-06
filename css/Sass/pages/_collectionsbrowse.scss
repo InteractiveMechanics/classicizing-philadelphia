@@ -1,3 +1,8 @@
+.collections-page {
+	background-color: $white;
+}
+
+
 .collections-page-heading {
 	@include page-heading();
 	padding-top: 100px;

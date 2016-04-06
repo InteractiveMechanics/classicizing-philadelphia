@@ -626,7 +626,7 @@ footer {
   float: left;
   width: 50%;
   height: 100%;
-  background-color: #f1f2f2;
+  background-color: #fff;
   text-transform: uppercase;
   color: #7a7765;
   padding-left: 20px;
@@ -729,6 +729,9 @@ footer {
   @media (min-width: 768px) and (max-width: 1023px) {
     .homepage-thumbnails-container {
       width: 100%; } }
+
+.collections-page {
+  background-color: #f1f2f2; }
 
 .collections-page-heading {
   font-size: 45px;
