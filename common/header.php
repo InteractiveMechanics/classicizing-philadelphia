@@ -85,7 +85,7 @@
 	      			<?php echo search_form(array('show_advanced' => false, 'show_searchpage' => false)); ?>
       			</form>
 
-      			<p class="navbar-text navbar-left navbar-mobile-guide"><a href="#" class="navbar-link">Explore the Mobile Guide</a></p>
+      			<p class="navbar-text navbar-left navbar-mobile-guide"><a href="http://classicizingphiladelphia.org/mobile" class="navbar-link">Explore the Mobile Guide</a></p>
 
     		</div> <!-- /.navbar-header pull-right -->
     		
