@@ -1023,13 +1023,14 @@ footer {
       width: 100%; } }
 
 .item-name {
-  display: inline-block;
+  display: inline;
   color: #2e7dc1;
   text-transform: uppercase;
   font-weight: 600;
   letter-spacing: 1.75px;
   font-size: 42px;
-  margin-bottom: 30px; }
+  margin-bottom: 30px;
+  margin-right: 10px; }
   @media (max-width: 320px) {
     .item-name {
       font-size: 30px; } }
@@ -1040,7 +1041,7 @@ footer {
 .item-year {
   display: inline-block;
   color: #7a7765;
-  margin-left: 10px; }
+  margin-bottom: 30px; }
   @media (max-width: 320px) {
     .item-year {
       font-size: 20px; } }
