@@ -97,6 +97,25 @@
 	}
 }
 
+.navbar-default .navbar-nav>.active>a, 
+.navbar-default .navbar-nav>.active>a:focus, 
+.navbar-default .navbar-nav>.active>a:hover {
+	background-color: initial;
+	color: $white;
+	&:after {
+		content: "";
+		border-bottom: 4px solid $white;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		margin-left: 15px;
+		right: 15px;
+		@include mobile-portrait {
+			border-bottom: 1px solid rgba(171, 171, 171, 0.45);
+			}
+	}
+}
+
 .navbar-nav {
 	@include mobile-portrait {
 		margin: 0px -15px;

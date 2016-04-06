@@ -139,6 +139,27 @@ section {
         .navbar-default .navbar-nav > li > a:hover:after {
           border-bottom: 1px solid rgba(171, 171, 171, 0.45); } }
 
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:focus,
+.navbar-default .navbar-nav > .active > a:hover {
+  background-color: initial;
+  color: #f1f2f2; }
+  .navbar-default .navbar-nav > .active > a:after,
+  .navbar-default .navbar-nav > .active > a:focus:after,
+  .navbar-default .navbar-nav > .active > a:hover:after {
+    content: "";
+    border-bottom: 4px solid #f1f2f2;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin-left: 15px;
+    right: 15px; }
+    @media (max-width: 320px) {
+      .navbar-default .navbar-nav > .active > a:after,
+      .navbar-default .navbar-nav > .active > a:focus:after,
+      .navbar-default .navbar-nav > .active > a:hover:after {
+        border-bottom: 1px solid rgba(171, 171, 171, 0.45); } }
+
 @media (max-width: 320px) {
   .navbar-nav {
     margin: 0px -15px; } }
