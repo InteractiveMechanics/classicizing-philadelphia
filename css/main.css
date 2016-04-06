@@ -44,6 +44,10 @@ img {
 .italics {
   font-style: italic; }
 
+.no-results {
+  text-align: center;
+  font-size: 24px; }
+
 h1, h2, h3, h4, h5, h6, label, input, textarea {
   font-family: "PT Sans Narrow", sans-serif; }
 
@@ -748,7 +752,7 @@ footer {
       font-size: 36px; } }
 
 .collectionsshow-page {
-  background-color: #dedede; }
+  background-color: #fff; }
 
 @media (min-width: 537px) and (max-width: 767px) {
   .jumbotron-slider-img-collectionsshow {
@@ -758,7 +762,8 @@ footer {
     margin-top: 20px; } }
 
 .jumbotron-collections-show {
-  overflow: auto; }
+  overflow: auto;
+  background-color: #f1f2f2; }
 
 .collections-jumbotron-page-heading {
   font-size: 45px;
@@ -878,7 +883,7 @@ footer {
   border-top: none;
   border-right: none;
   border-left: none;
-  background-color: #dedede; }
+  background-color: #fff; }
 
 .bootstrap-select.btn-group .dropdown-menu {
   margin-top: 15px; }

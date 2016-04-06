@@ -120,10 +120,10 @@
 		</section>
               <?php echo pagination_links(array('total_results' => count($item_records), 'per_page' => 20)); ?>
         <?php else: ?>
-            <p><?php echo __("There are currently no items within this collection."); ?></p>
+            <p class="no-results"><?php echo __("There are currently no items within this collection."); ?></p>
         <?php endif; ?>
         </div><!-- end collection-items -->
-         <?php fire_plugin_hook('public_items_browse_each', array('view' => $this, 'item' =>$item)); ?>
+        
         
         
 

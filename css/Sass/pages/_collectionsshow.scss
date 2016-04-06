@@ -1,5 +1,5 @@
 .collectionsshow-page {
-	background-color: #dedede;
+	background-color: #fff;
 }
 
 .jumbotron-slider-img-collectionsshow {
@@ -13,6 +13,7 @@
 
 .jumbotron-collections-show {
 	overflow: auto;
+	background-color: $white;
 }
 
 .collections-jumbotron-page-heading {
@@ -143,7 +144,7 @@
 	border-top: none;
 	border-right: none;
 	border-left: none;
-	background-color: #dedede;
+	background-color: #fff;
 }
 
 .bootstrap-select.btn-group .dropdown-menu {
