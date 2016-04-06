@@ -32,12 +32,19 @@
                     'tags' => rawurldecode($tags)
                 ), 0);
             } else {
+	            if (isset($_GET['page'])) {
+		            //$offset = $_GET['page']*20;
+	            } else {
+		            $offset = 0;
+	            }
                 $item_records = get_records('Item', array(
                     'collection' => $collection
+                    //'offset' => $offset
                 ), 0);
             }
             set_loop_records('items', $item_records);
         ?>
+       
         <section class="container filter-section">
 			<div class="row">
 				<h2 class="item-counter">
@@ -79,11 +86,21 @@
 				</div>
 			</div>
 		</section>
+	
     
     
 		<section class="vertical-thumbnail-container">
         <?php if (count($item_records) > 0): ?>
-            <?php foreach (loop('items') as $item): ?>
+        	<?php $index = 0; ?>
+        	<?php  if (isset($_GET['page'])) {
+		            $offset = $_GET['page']-1;
+	            } else {
+		            $offset = 0;
+	            }
+			?>	
+            <?php foreach (loop('items') as $item): 
+	            if ($index >= $offset * 20 || $index <= $offset * 20 + 19):  
+            ?>
             <div class="col-sm-3 vertical-thumbnail browse-items">
                 <?php if (metadata('item', 'has thumbnail')): ?>
                 <div class="vertical-thumbnail-img">
@@ -94,17 +111,19 @@
 	                <h5 class="vertical-thumbnail-caption-year"><?php echo ($itemDate); ?></h5>
 	                <?php $itemTitle = strip_formatting(metadata('item', array('Dublin Core', 'Title'))); ?>
 	                <h4 class="vertical-thumbnail-caption-title"><?php echo ($itemTitle); ?></h4>  
-                </div>
-                 <?php fire_plugin_hook('public_items_browse_each', array('view' => $this, 'item' =>$item)); ?>   
-                <?php echo pagination_links(); ?>
+                </div>   
                 <?php endif; ?>
              </div>
+             <?php $index++; ?>
+			 <?php endif; ?>
             <?php endforeach; ?>
+		</section>
+              <?php echo pagination_links(array('total_results' => count($item_records), 'per_page' => 20)); ?>
         <?php else: ?>
             <p><?php echo __("There are currently no items within this collection."); ?></p>
         <?php endif; ?>
         </div><!-- end collection-items -->
-        
+         <?php fire_plugin_hook('public_items_browse_each', array('view' => $this, 'item' =>$item)); ?>
         
         
 
