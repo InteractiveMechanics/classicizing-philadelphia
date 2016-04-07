@@ -51,17 +51,23 @@
 	padding-bottom: 0;
 	@include mobile-portrait {
 		width: 100%;
+		padding-top: 30px;
+		padding-bottom: 30px;
 	}
 	@include mobile-landscape {
 		width: 100%;
+		padding-top: 30px;
+		padding-bottom: 30px;
 	}
 	@include mobile-large {
 		width: 100%;
+		padding-top: 30px;
+		padding-bottom: 30px;
 	}
 	@include tablet {
 		margin-top: 0px;
 		padding-top: 40px;
-		padding-bottom: 0px;
+		padding-bottom: 40px;
 	}
 }
 
@@ -229,11 +235,19 @@
 	padding: 50px;
 	display: flex;
 	letter-spacing: 1.75px;
+	@include mobile-portrait {
+		height: 185px;
+		padding: 25px;
+	}
 	@include mobile-landscape {
+		height: 185px;
+		padding: 25px;
 		margin-left: 0px;
 		margin-right: 0px;
 	}
 	@include mobile-large {
+		height: 185px;
+		padding: 25px;
 		margin-top: -30px;
 		margin-left: auto;
 		margin-right: auto;
@@ -244,6 +258,30 @@
 		padding: 25px;
 	}
 
+}
+
+.vertical-thumbnail-caption-year {
+	@include mobile-portrait {
+		font-size: 20px;
+	}
+	@include mobile-landscape {
+		font-size: 20px;
+	}
+	@include mobile-large {
+		font-size: 20px;
+	}
+}
+
+.vertical-thumbnail-caption-title {
+	@include mobile-portrait {
+		font-size: 28px;
+	}
+	@include mobile-landscape {
+		font-size: 28px;
+	}
+	@include mobile-large {
+		font-size: 28px;
+	}
 }
 
 

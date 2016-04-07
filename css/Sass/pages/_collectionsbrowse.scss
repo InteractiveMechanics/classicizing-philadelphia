@@ -19,3 +19,12 @@
 		font-size: 36px;
 	}
 }
+
+.thumbnail-caption-featured-collection-link {
+	font-weight: 400;
+	color: #545246;
+	&:hover, &:active, &:focus {
+		text-decoration: none;
+	}
+
+}

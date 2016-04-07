@@ -53,13 +53,11 @@
 	padding: 0px 75px;
 	@include mobile-portrait {
 		width: 100%;
-		padding-left: 30px;
-		padding-right: 30px;
+		padding: 30px;
 	}
 	@include mobile-landscape {
 		width: 100%;
-		padding-left: 30px;
-		padding-right: 30px;
+		padding: 30px;
 	}
 	@include mobile-large {
 		width: 100%;
@@ -90,9 +88,28 @@
 }
 
 .stories-thumbnail {
+	@include mobile-portrait {
+		margin-top: 30px;
+	}
+	@include mobile-landscape {
+		margin-top: 30px;
+	}
+	@include mobile-large {
+		margin-top: 30px;
+	}
 	@include tablet {
 		width: 100%;
 	}
 }
+
+.thumbnail-caption-featured-collection>a {
+	font-weight: 400;
+	color: #545246;
+	&:hover, &:active, &:focus {
+		text-decoration: none;
+	}
+}
+
+
 
 

@@ -178,8 +178,23 @@ h1 {
 		background-color: $light-black;
 		transition: $transition;
 	}
+	
+	@include mobile-portrait {
+		height: 52px;
+		margin-right: 20px;
+		margin-bottom: 0;
+	}
+	
+	@include mobile-landscape {
+		height: 52px;
+		margin-right: 20px;
+		margin-bottom: 0;
+		
+	}
+	
 	@include mobile-large {
 		margin-right: 15px;
+		margin-bottom: 0;
 	}
 }
 
@@ -203,19 +218,22 @@ h1 {
 	background-color: $light-black;
 	@include mobile-portrait {
 		display: inline-block;
+		position: relative;
 		width: 180px !important;
 		margin-left: 44px;
 	}
 	@include mobile-landscape {
 		display: inline-block;
+		position: relative;
 		margin-left: 44px;
-		width: calc(100vw - 140px) !important;
+		width: calc(100vw - 138px) !important;
 	}
 	@include mobile-large {
 		display: inline-block;
-		position: relative;
-		right: 45px;
-		width: calc(100vw - 140px) !important;
+		//position: relative;
+		//right: 45px;
+		margin-left: 44px;
+		width: calc(100vw - 138px) !important;
 	}
 	@include tablet {
 		width: 164px !important;
@@ -232,9 +250,11 @@ h1 {
 	}
 	@include mobile-portrait {
 		right: 223px;
+		height: 50px;
 	}
 	@include mobile-landscape {
 		left: 53px;
+		height: 50px;
 	}
 	@include mobile-large {
 		left: 53px;
@@ -263,13 +283,13 @@ h1 {
 		transition: $transition;
 	}
 	@include mobile-portrait {
-		margin-top: -9px;
+		margin-top: -13px;
 	}
 	@include mobile-landscape {
-		margin-top: -9px;
+		margin-top: -13px;
 	}
 	@include mobile-large {
-		margin-top: -9px;
+		margin-top: -13px;
 		position: relative;
 		right: 44px;
 	}

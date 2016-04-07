@@ -7,6 +7,18 @@
 	height: 275px;
 	padding: 0;
 	border: none;
+	@include mobile-portrait {
+		width: 90%;
+		margin-left: 5%;
+		margin-right: 5%;
+	}
+	
+	@include mobile-landscape {
+		width: 90%;
+		margin-left: 5%;
+		margin-right: 5%;
+	}
+	
 }
 
 .thumbnail-50 {
@@ -80,13 +92,15 @@
   	 }
   	 @include mobile-portrait {
   	 	width: 100%;
-  	 	background-color: rgba(242, 241, 241, 0.5);
+  	 	background-color: rgba(179, 179, 179, 0.7);
   	 	margin-top: -275px;
+  	 	color: #545246;
   	 }
   	 @include mobile-landscape {
   	 	width: 100%;
-  	 	background-color: rgba(242, 241, 241, 0.5);
+  	 	background-color: rgba(179, 179, 179, 0.7);
   	 	margin-top: -275px;
+  	 	color: #545246;
   	 }
 
 }

@@ -6,13 +6,13 @@
             <div class="col-sm-6 item-image">
                 <?php $images = $item->Files; $imagesCount = 1; ?>
                 <?php if ($images): ?>
-                <ul class="clearfix">
+                <div class="clearfix">
                     <?php foreach ($images as $image): ?>
                         <?php if ($imagesCount === 1): ?>
                             <img src="<?php echo url('/'); ?>files/original/<?php echo $image->filename; ?>" />
                         <?php endif; ?>
                     <?php $imagesCount++; endforeach; ?>
-                </ul>
+                </div>
                 <?php else: ?>
                     <div class="no-image">No photos available.</div>
                 <?php endif; ?>

@@ -48,14 +48,6 @@
 <?php echo body_tag(array('id' => @$bodyid, 'class' => @$bodyclass)); ?>
     <?php fire_plugin_hook('public_body', array('view'=>$this)); ?>
     <header role="banner">
-<!--
-        <div class="container">
-            <?php fire_plugin_hook('public_header', array('view'=>$this)); ?>
-            <h1 class="site-title text-center"><?php echo link_to_home_page(theme_logo()); ?></h1>
-
-        </div>
--->
-
         <nav class="navbar navbar-default" role="navigation">
            <div class="clearfix">
 	           <a class="navbar-brand" href="<?php echo url('/'); ?>">

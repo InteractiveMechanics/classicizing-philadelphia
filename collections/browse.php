@@ -28,7 +28,7 @@
 			                     <?php $myTitle = metadata('collection', array('Dublin Core', 'Title')); ?>
 								<?php if ($myTitle):  ?>
 									<h2 class="thumbnail-caption-featured-collection"><?php echo $myTitle; ?></h2>
-								<?php echo link_to_collection('<h4>View Items in this collection</h4>', array('class' => 'thumbnail-link')); ?>
+								<?php echo link_to_collection('<h4 class="thumbnail-caption-featured-collection-link">View Items in this collection</h4>', array('class' => 'thumbnail-link')); ?>
 								<?php endif; ?>
 		                     </div>
 		                </div>
