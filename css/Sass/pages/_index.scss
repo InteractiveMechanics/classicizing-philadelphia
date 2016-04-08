@@ -32,6 +32,10 @@
 		height: auto;
 		padding: 30px;
 	}
+	@include tablet-landscape {
+		height: auto;
+		padding: 30px;
+	}
 }
 
 

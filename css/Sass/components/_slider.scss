@@ -78,7 +78,13 @@
 	}
 	@include mobile-landscape {
 		width: 100%;
+	}
+	@include mobile-large {
+		width: 100%;
 	}	
+	@include tablet {
+		width: 100%;
+	}
 }
 
 .jumbotron-slider-text {
